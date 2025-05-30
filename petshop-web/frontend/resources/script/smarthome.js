@@ -1,8 +1,8 @@
-fetch("http://localhost:8080/api/product-smart1")
+fetch("http://localhost:8080/api/product-smart")
     .then((response) => response.json())
     .then((data) => {
-        const productTemplate = document.getElementById("product-smart1-template");
-        const productList = document.getElementById("product-smart1-list");
+        const productTemplate = document.getElementById("product-smart-template");
+        const productList = document.getElementById("product-smart-list");
 
         data.forEach((product) => {
             const clone = productTemplate.cloneNode(true);

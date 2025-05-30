@@ -1,7 +1,7 @@
 fetch("http://localhost:8080/api/product-smart3")
     .then((response) => response.json())
     .then((data) => {
-        const productTemplate = document.getElementById("product-smart3");
+        const productTemplate = document.getElementById("product-smart3-template");
         const productList = document.getElementById("product-smart3-list");
 
         data.forEach((product) => {
@@ -17,5 +17,5 @@ fetch("http://localhost:8080/api/product-smart3")
         });
     })
     .catch((error) => {
-        console.error("Lỗi khi lấy dữ liệu sản phẩm smart3:", error);
+        console.error("Lỗi khi lấy dữ liệu sản phẩm smart:", error);
     });
