@@ -16,4 +16,7 @@ public class UserService {
         return userRP.findAll();
     }
 
+    public void saveUser(User user) {
+        userRP.save(user);
+    }
 }

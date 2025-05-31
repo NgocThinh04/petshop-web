@@ -25,6 +25,9 @@ public class User {
     @Column(name = "user_pw", nullable = false, length = 16)
     private String PW;
 
+    @Column(name = "email", nullable = true)
+    private String Email;
+
     @Column(name = "date_creat", nullable = false)
     private LocalDateTime DateCreat;
 
@@ -61,6 +64,14 @@ public class User {
 
     public void setPW(String PW) {
         this.PW = PW;
+    }
+
+    public String getMail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
 
     public LocalDateTime getDataCreat() {

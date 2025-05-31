@@ -62,31 +62,64 @@
                     alt="*"
                 /></span>
                 <h3>Đăng ký</h3>
-                <input name="name" type="text" placeholder="Họ tên" required />
                 <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Họ tên"
+                  required
+                />
+                <input
+                  id="username"
                   name="user-name"
                   type="text"
                   placeholder="Tên đăng nhập"
                   required
                 />
-                <input id="email" type="email" placeholder="Email" required />
-                <input type="text" placeholder="Mật khẩu" required />
                 <input
+                  oninput="OtpButton()"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  id="password"
+                  type="text"
+                  placeholder="Mật khẩu"
+                  required
+                />
+                <input
+                  id="confirmpassword"
                   name="password"
                   type="text"
                   placeholder="Nhập lại mật khẩu"
                   required
                 />
                 <div class="form-otp">
-                  <input type="text" placeholder="OTP" />
-                  <button id="sendOtpBtn" onclick="sendOtp()" class="submit">
+                  <input id="otp" type="text" placeholder="OTP" />
+                  <button
+                    disabled
+                    style="opacity: 0.5; cursor: not-allowed"
+                    id="sendOtpBtn"
+                    onclick="sendOtp()"
+                    class="submit"
+                  >
                     Gửi mã OTP
                   </button>
                 </div>
-                <button class="submit">Đăng ký</button>
+                <button onclick="confirm(event)" class="submit">Đăng ký</button>
                 <button onclick="showLoginForm()" class="register-btn">
                   Quay lại đăng nhập
                 </button>
+                <div
+                  id="message"
+                  style="
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-family: 'Pacifico', cursive;
+                  "
+                ></div>
               </div>
             </div>
           </div>
@@ -273,6 +306,7 @@
           <a href="#">Blogs</a>
           <a href="#">Bộ Sưu Tập</a>
         </div>
+
         <div class="fulldvuchild">
           <b>Paddy Pet Shop</b>
           <a href="#">Giới Thiệu</a>

@@ -26,7 +26,10 @@ public class OtpController {
     @PostMapping("/rest")
     public ResponseEntity<String> restOtp(@RequestBody Map<String, String> request) {
         boolean value = otpService.restOtp(request.get("email"), request.get("code"));
-        return value ? ResponseEntity.ok("Xác minh thành công")
-                : ResponseEntity.badRequest().body("Mã OTP không hợp lệ hoặc đã hết hạn.");
+        if (value) {
+            return ResponseEntity.ok("Xác minh thành công.");
+        } else {
+            return ResponseEntity.badRequest().body("Mã OTP không hợp lệ hoặc đã hết hạn.");
+        }
     }
 }

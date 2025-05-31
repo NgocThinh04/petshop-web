@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.petshop_web.entity.Smart;
 import java.util.List;;
+
 @Repository
 public interface ProductSmart2RP extends JpaRepository<Smart, Long> {
     @Query("SELECT s FROM Smart s WHERE s.ClassifySmart = 'V'")

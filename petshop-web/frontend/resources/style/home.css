@@ -109,7 +109,6 @@
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -366,14 +365,14 @@
     text-decoration: underline  ;
     color: rgb(7, 79, 234);
 }
+
+/*Login*/
 #producthome {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 25px;
     padding: 10px;
 }
-/*Login*/
-
 
 .login-form {
     position: fixed;

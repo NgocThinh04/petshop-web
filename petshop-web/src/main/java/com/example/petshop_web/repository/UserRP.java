@@ -7,4 +7,5 @@ import com.example.petshop_web.entity.User;
 
 @Repository
 public interface UserRP extends JpaRepository<User, Long> {
+
 }

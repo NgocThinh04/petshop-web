@@ -19,6 +19,7 @@ public class OtpService {
 
     public void sendOtp(String email) {
         String code = String.format("%06d", new Random().nextInt(999999));
+        // Hiệu lực OTP
         LocalDateTime time = LocalDateTime.now().plusMinutes(1);
 
         otpMap.put(email, new OtpUser(code, time));
@@ -32,9 +33,11 @@ public class OtpService {
     }
 
     public boolean restOtp(String email, String code) {
+        // Lấy code theo email
         OtpUser otpUser = otpMap.get(email);
         if (otpUser == null)
             return false;
+        // Check code
         boolean checkid = otpUser.getCode().equals(code) && otpUser.getTime().isAfter(LocalDateTime.now());
         if (checkid)
             otpMap.remove(email);
