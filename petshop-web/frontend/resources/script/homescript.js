@@ -44,27 +44,6 @@ function sendOtp() {
     .catch(err => console.error("Loi",err));
 }
 
-//Xác thực OTP
-function restOtp() {
-    const email = document.getElementById("email").value;
-    const code = document.getElementById("otp").value;
-
-    fetch("http://localhost:8080/api/otp/rest",{
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({email:email, code: code})
-    })
-    .then(res => {
-      return res.text().then(text => {
-        if(res.ok) {
-          showMessage(text, "green");
-        } else {
-          showMessage(text,"red");
-        }
-      })
-    })
-    .catch(err => alert(err.message))
-}
 function OtpButton() {
     const email = document.getElementById("email").value.trim();
     const otpBtn = document.getElementById("sendOtpBtn");
@@ -91,29 +70,45 @@ function OtpButton() {
     const otp = document.getElementById("otp").value.trim();
   
     if (!name || !username || !email || !password || !confirmPassword || !otp) {
-      showMessage("Vui lòng nhập đầy đủ thông tin và mã OTP!", "red");
+      showMessage("Vui lòng nhập đầy đủ thông tin", "red");
       return;
     } else if(password !== confirmPassword) {
         showMessage("Mật khẩu nhập lại không khớp!", "red");
         return;
-    }
-      else {
-        fetch("http://localhost:8080/api/home/login", {
+    } else  {
+    fetch("http://localhost:8080/api/otp/rest",{
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({email:email, code: otp})
+    })
+    .then(res => {
+      return res.text().then(text => {
+        if(res.ok) {
+          showMessage(text, "green");
+        } else {
+          showMessage(text,"red");
+          return;
+        }
+      })
+    })
+    .catch(err => showMessage(err.message,"red"));
+    } 
+        fetch("http://localhost:8080/api/user/login", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({username: username,name: name, password: password, email: email })
+          body: JSON.stringify({userName: username,name: name, pw: password, email: email })
         })
-        .then(res => {
-          res.ok(showMessage(text, "green"));
-        }
-          
-        )
-        .catch((err) => {
-          console.err("Loi", err);
+        .then((res => res.text()))
+        .then(() => {
+          document.getElementById("name").value = "";
+          document.getElementById("username").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          document.getElementById("confirmpassword").value = "";
+          document.getElementById("otp").value = "";
         })
-        }
-    }
-
+        .catch(err => showMessage(err.message,"red"))
+}
 
 function showMessage(message, color) {
     const msgDiv = document.getElementById("message");

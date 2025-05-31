@@ -1,5 +1,6 @@
 package com.example.petshop_web.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,8 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User user) {
+        user.SetDateCreat(LocalDateTime.now());
         userService.saveUser(user);
-        return ResponseEntity.ok("Đăng ký thành công.");
+        return ResponseEntity.ok("");
     }
 }

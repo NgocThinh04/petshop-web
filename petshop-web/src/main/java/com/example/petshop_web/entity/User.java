@@ -16,20 +16,20 @@ public class User {
     @Column(name = "id_user")
     private Long Id;
 
-    @Column(name = "user_name", nullable = false, length = 20)
-    private String UserName;
+    @Column(name = "user_name", length = 20)
+    private String userName;
 
-    @Column(name = "name", nullable = false, length = 40)
+    @Column(name = "name", length = 40)
     private String Name;
 
-    @Column(name = "user_pw", nullable = false, length = 16)
-    private String PW;
+    @Column(name = "user_pw", length = 16)
+    private String pw;
 
-    @Column(name = "email", nullable = true)
+    @Column(name = "email")
     private String Email;
 
-    @Column(name = "date_creat", nullable = false)
-    private LocalDateTime DateCreat;
+    @Column(name = "date_creat")
+    private LocalDateTime dateCreat;
 
     public User() {
     }
@@ -43,11 +43,11 @@ public class User {
     }
 
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getName() {
@@ -59,14 +59,14 @@ public class User {
     }
 
     public String getPW() {
-        return PW;
+        return pw;
     }
 
-    public void setPW(String PW) {
-        this.PW = PW;
+    public void setPW(String pw) {
+        this.pw = pw;
     }
 
-    public String getMail() {
+    public String getEmail() {
         return Email;
     }
 
@@ -74,7 +74,11 @@ public class User {
         this.Email = Email;
     }
 
-    public LocalDateTime getDataCreat() {
-        return DateCreat;
+    public LocalDateTime getDateCreat() {
+        return dateCreat;
+    }
+
+    public void SetDateCreat(LocalDateTime dateCreat) {
+        this.dateCreat = dateCreat;
     }
 }
