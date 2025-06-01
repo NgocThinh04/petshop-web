@@ -14,23 +14,35 @@ public class Admin {
     private Long IdAdmin;
 
     @Column(name = "admin_name", nullable = false)
-    private String AdminName;
+    private String adminName;
 
     @Column(name = "admin_pw", nullable = false)
-    private String AdminPW;
+    private String pw;
 
     public Admin() {
+    }
+
+    public void setIdAdmin(Long id) {
+        this.IdAdmin = id;
     }
 
     public Long getIdAdmin() {
         return IdAdmin;
     }
 
+    public void setAdminName(String adminname) {
+        this.adminName = adminname;
+    }
+
     public String getAdminName() {
-        return AdminName;
+        return adminName;
+    }
+
+    public void setAdminPW(String pw) {
+        this.pw = pw;
     }
 
     public String getAdminPW() {
-        return AdminName;
+        return pw;
     }
 }

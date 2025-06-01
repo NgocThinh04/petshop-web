@@ -59,7 +59,7 @@ function OtpButton() {
       otpBtn.style.opacity = "0.5";
       otpBtn.style.cursor = "not-allowed";
     }
-  }
+}
   function confirm(event) {
     event.preventDefault();
     const name = document.getElementById("name").value.trim();
@@ -110,8 +110,46 @@ function OtpButton() {
         .catch(err => showMessage(err.message,"red"))
 }
 
-function showMessage(message, color) {
-    const msgDiv = document.getElementById("message");
-    msgDiv.textContent = message;
-    msgDiv.style.color = color;
+function loginbtn(event){
+  event.preventDefault();
+  const username = document.getElementById("usernamelogin").value.trim();
+  const pwlogin = document.getElementById("pwlogin").value.trim();
+  if(!username) {
+    showMessage("Vui lòng nhập tên đăng nhập","red")
+    return;
+  } else if(!pwlogin) {
+    showMessage("Vui lòng nhập mật khẩu", "red")
+  } 
+  else {
+    fetch("http://localhost:8080/api/home/login",
+      {
+        method: "POST",
+        credentials: 'include',
+        headers:{"Content-Type": "application/json"},     
+        body: JSON.stringify({
+          userName: username,
+          pw: pwlogin
+        })
+      }
+    ) 
+    .then(res => {
+      return res.text().then(text => {
+        if(res.ok) {
+          showMessage("Đăng nhập thành công", "green");
+        } else {
+          showMessage(text,"red");
+          return;
+        }
+      })
+    })
+    .catch(error => {
+      console(error.message);
+    });
   }
+}
+
+function showMessage(message, color) {
+  const msgDiv = document.getElementById("message");
+  msgDiv.textContent = message;
+  msgDiv.style.color = color;
+}

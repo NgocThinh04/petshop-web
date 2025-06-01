@@ -44,13 +44,33 @@
                     alt="*"
                 /></span>
                 <h3>Đăng Nhập</h3>
-                <input type="email" placeholder="Email" required />
-                <input type="password" placeholder="Mật khẩu" required />
-                <button class="submit">Đăng Nhập</button>
-                <a href="#">Quên mật khẩu?</a>
+                <input
+                  id="usernamelogin"
+                  type="email"
+                  placeholder="Tên đăng nhập"
+                  required
+                />
+                <input
+                  id="pwlogin"
+                  type="password"
+                  placeholder="Mật khẩu"
+                  required
+                />
+                <button onclick="loginbtn(event)" class="submit">
+                  Đăng Nhập
+                </button>
+                <!-- <a href="#">Quên mật khẩu?</a> -->
                 <button onclick="showCreatForm()" class="register-btn">
                   Tạo tài khoản mới
                 </button>
+                <div
+                  id="message"
+                  style="
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-family: 'Pacifico', cursive;
+                  "
+                ></div>
               </div>
             </div>
             <!--  -->
