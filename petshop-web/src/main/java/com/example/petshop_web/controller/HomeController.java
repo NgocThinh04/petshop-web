@@ -4,13 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.petshop_web.service.ProductHomeService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -20,7 +17,6 @@ import com.example.petshop_web.entity.*;
 import com.example.petshop_web.repository.AdminRP;
 import com.example.petshop_web.repository.UserRP;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -28,16 +24,9 @@ import java.util.Optional;
 @CrossOrigin
 public class HomeController {
     @Autowired
-    private ProductHomeService productHomeService;
-    @Autowired
     private AdminRP adminRP;
     @Autowired
     private UserRP userRP;
-
-    @GetMapping
-    public List<Product> getAllProduct() {
-        return productHomeService.getAllProduct();
-    }
 
     @PostMapping("/login")
     // Phản hồi bất kiểu dữ liệu nào

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="/petshop-web/frontend/resources/style/Admin/SmartAD.css" 
+      />
+</head>
+<body>
+    <div class="maincard">
+      
+      <!-- anh san pham -->
+      <div class="cardimg">
+          <p>Vui lòng chọn ảnh của thiết bị</p>
+                 <input type="file" id="anhsp" />
+                 <div style=" border-radius: 9px; border: 5px solid rgb(150, 138, 138);">
+                   <img id="previewImage" />
+                 </div>
+      </div>
+
+
+      <!-- thong tin san pham -->
+     <div class="card" id="mainformnhap">
+
+      
+      <div class="divson">
+        <div class="divson1">
+            <p>Loại thiết bị</p>
+            <select id="loai">
+                <option value="T01">Máy Ăn Uống Tự Động Cho Chó Mèo</option>
+                <option value="T02">Máy Vệ Sinh Tự Động Cho Mèo</option>
+            </select>
+          </div>
+      </div>
+       <div class="divson">
+          <div class="divson1">
+                 <p>Tên thương hiệu</p>
+                 <input id="thieu" type="text" placeholder="Nhập tên thương hiệu..." />
+          </div>
+          <div class="divson1">
+         <p>Tên của thiết bị</p>
+         <input id="ten" type="text" placeholder="Nhập tên thiết bị..."/>
+       </div>
+       </div>
+       <div class="divson">
+         <div class="divson1">
+          <p>Số lượng nhập kho thiết bị</p>
+          <input id="soluongg" type="text" placeholder="Nhập số lượng của thiết bị..." />
+
+         </div>
+         <div class="divson1">
+            <p>Giá của thiết bị</p>
+            <input id="nhapgia" type="text" placeholder="Nhập giá của thiết bị..." />
+         </div>
+       </div>
+       <div class="divson">
+           <div class="divson1">
+                 <p>Mô tả sản phẩm </p>
+                 <input id="mota" type="text" placeholder="Nhập mô tả chi tiết sản phẩm..." />
+           </div>
+       </div>
+
+       <div class="divson">
+        <button type="button" id="nutnhap">Thêm sản phẩm</button>
+       </div>
+     </div>
+
+  </div>
+     <script src="/petshop-web/frontend/resources/script/admin/SmartAD.js"></script>
+     <script src="/petshop-web/frontend/resources/script/admin/admin.js"></script>
+</body>
+</html>

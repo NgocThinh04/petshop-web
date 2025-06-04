@@ -24,16 +24,54 @@
             />
           </button>
         </div>
+        <!---->
         <div class="cacdvukhac">
-          <button class="btn" onclick="clickbtn()">
+          <button class="btn" onclick="openWishlist()">
             <img src="/petshop-web/frontend/resources/image/love.png" />
             <p>Wishlist</p>
           </button>
+          <div id="wishlist-overlap" class="login-overlap hidden">
+            <div class="login-form">
+              <div class="login-content">
+                <span class="close-btn" onclick=" openWishlist()">
+                  <img
+                    src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                    alt="*"
+                  />
+                </span>
+                <h3>Danh sách yêu thích</h3>
+
+                <div id="wishlistItems" class="wishlist-items">
+                  <div class="items">
+                    <p>Tên sản phẩm</p>
+                    <p>Giá</p>
+                    <button>
+                      <img
+                        src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                  <div class="items">
+                    <p>Tên sản phẩm</p>
+                    <p>Giá</p>
+                    <button>
+                      <img
+                        src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!---->
         <div class="cacdvukhac">
-          <button class="btn" onclick="clickbtn()">
+          <button id="loginBtn" class="btn" onclick="clickbtn()">
             <img src="/petshop-web/frontend/resources/image/account.png" />
-            <p>Đăng nhập</p>
+            <p id="loginBtnText">Đăng nhập</p>
           </button>
           <div id="login-overlap" class="login-overlap hidden">
             <div id="loginform" class="login-form">
@@ -81,7 +119,7 @@
                     src="/petshop-web/frontend/resources/image/icons8-close-96.png"
                     alt="*"
                 /></span>
-                <h3>Đăng ký</h3>
+                <h3 id="textCreat">Đăng ký</h3>
                 <input
                   id="name"
                   name="name"
@@ -128,8 +166,18 @@
                     Gửi mã OTP
                   </button>
                 </div>
-                <button onclick="confirm(event)" class="submit">Đăng ký</button>
-                <button onclick="showLoginForm()" class="register-btn">
+                <button
+                  id="buttonCreat"
+                  onclick="confirm(event)"
+                  class="submit"
+                >
+                  Đăng ký
+                </button>
+                <button
+                  id="buttonLogin"
+                  onclick="showLoginForm()"
+                  class="register-btn"
+                >
                   Quay lại đăng nhập
                 </button>
                 <div
@@ -142,13 +190,28 @@
                 ></div>
               </div>
             </div>
+            <!-- -->
           </div>
         </div>
         <div class="cacdvukhac">
-          <a href="cart.html">
-            <img src="/petshop-web/frontend/resources/image/cart.png" />
-            <p>Giỏ Hàng</p>
-          </a>
+          <button class="btn" onclick="opencart()">
+            <img src="/petshop-web/frontend/resources/image/cart.png" alt="*" />
+            <p>Giỏ hàng</p>
+          </button>
+          <div id="cart-overlap" class="login-overlap hidden">
+            <div class="login-form">
+              <div class="login-content">
+                <span class="close-btn" onclick="opencart()">
+                  <img
+                    src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                    alt="*"
+                  />
+                </span>
+                <h3>Giỏ hàng của bạn</h3>
+                <div id="cart-items" class="wishlist-items"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

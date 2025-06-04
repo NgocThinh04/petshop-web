@@ -1,14 +1,11 @@
 package com.example.petshop_web.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.*;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "smart")
@@ -34,7 +31,14 @@ public class Smart {
     private Integer QuantitySmart;
 
     @Column(name = "date_add_smart", nullable = false)
+    @CreationTimestamp
     private LocalDateTime DateAddSmart;
+
+    @Column(name = "imageproduct_smart", nullable = true )
+    private String ImageproductSmart;
+    
+    @Column(name = "describe_smart", nullable = true)
+    private String DescribeSmart;
 
     public Smart() {
     }
@@ -89,5 +93,21 @@ public class Smart {
 
     public LocalDateTime getDateAddSmart() {
         return DateAddSmart;
+    }
+
+    public String getImageProductSmart() {
+        return ImageproductSmart;
+    }
+
+    public void setImageProductSmart(String ImageProductSmart){
+        this.ImageproductSmart = ImageProductSmart;
+    }
+
+    public String getDescribeSmart(){
+        return DescribeSmart;
+    }
+    
+    public void setDescribeSmart(String DescribeSmart){
+        this.DescribeSmart = DescribeSmart;
     }
 }

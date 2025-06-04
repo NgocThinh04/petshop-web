@@ -1,3 +1,2 @@
-SELECT
-FROM product
-WHERE classify = 'D01';
+DELETE FROM user_user
+WHERE id_user = 27

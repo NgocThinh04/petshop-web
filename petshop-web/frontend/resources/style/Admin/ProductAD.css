@@ -1,0 +1,103 @@
+
+.maincard {
+   margin: 12px 100px;
+   min-height: 300px;
+   display: flex;
+   gap: 30px;
+}
+
+.cardimg {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardimg div{
+   height: 400px;
+   margin-top: 10px;
+}
+
+.cardimg img {
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+     transition: transform 0.5s ease;
+}
+
+.cardimg img:hover {
+   transform: scale(0.7);
+}
+
+
+.card {
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   row-gap: 24px;
+   background-color: #f0f8ff; 
+   height: 600px;
+   padding: 24px;
+   border-radius: 12px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divson {
+   display: flex;
+   gap: 20px;
+   height: 120px;
+   background-color: #f5deb3;
+   justify-content: center;
+   align-items: center;
+   padding: 12px;
+   border-radius: 8px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.divson1 {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 8px;
+}
+
+.divson1 p {
+   font-size: 20px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
+   font-weight: bold;
+   color:darkmagenta
+}
+
+ .divson1 input[type="text"] {
+   height: 30px;
+   border-radius: 14px;
+   border: none;
+   box-shadow: 0px 8px 10px  rgb(241, 91, 91);
+    padding: 8px 15px;
+    font-size: 17px;
+    outline: none;
+    background-color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.divson1 input[type="text"]:hover {
+   box-shadow: 0px 8px 10px  rgb(218, 143, 143);
+}
+
+
+.divson1 select {
+   height: 30px;
+      border-radius: 14px;
+   border: none;
+}
+
+ .divson1 select option {
+    padding: 8px 15px;
+    font-size: 17px;
+    outline: none;
+    background-color: whitesmoke;
+}

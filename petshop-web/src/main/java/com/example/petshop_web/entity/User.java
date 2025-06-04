@@ -78,7 +78,7 @@ public class User {
         return dateCreat;
     }
 
-    public void SetDateCreat(LocalDateTime dateCreat) {
+    public void setDateCreat(LocalDateTime dateCreat) {
         this.dateCreat = dateCreat;
     }
 }
