@@ -24,62 +24,198 @@
             />
           </button>
         </div>
-        <div class="cacdvukhac">
-          <button class="btn" onclick="clickbtn()">
-            <img src="https://cdn-icons-png.flaticon.com/128/6924/6924546.png" />
-            <p>Wishlist</p>
-          </button>
+  <!---->
+  <div class="cacdvukhac">
+    <button class="btn" onclick="openWishlist()">
+      <img src="https://cdn-icons-png.flaticon.com/128/6924/6924546.png" />
+      <p>Wishlist</p>
+    </button>
+    <div id="wishlist-overlap" class="login-overlap hidden">
+      <div class="login-form">
+        <div class="login-content">
+          <span class="close-btn" onclick=" openWishlist()">
+            <img
+              src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+              alt="*"
+            />
+          </span>
+          <h3>Danh sách yêu thích</h3>
+
+          <div id="wishlistItems" class="wishlist-items">
+            <div class="items">
+              <p>Tên sản phẩm</p>
+              <p>Giá</p>
+              <button>
+                <img
+                  src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="items">
+              <p>Tên sản phẩm</p>
+              <p>Giá</p>
+              <button>
+                <img
+                  src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+        <!---->
         <div class="cacdvukhac">
-          <button class="btn" onclick="clickbtn()">
+          <button id="loginBtn" class="btn" onclick="clickbtn()">
             <img src="https://cdn-icons-png.flaticon.com/128/16470/16470836.png" />
-            <p>Đăng nhập</p>
+            <p id="loginBtnText">Đăng nhập</p>
           </button>
-          <script src="/petshop-web/frontend/resources/script/home.js"></script>
           <div id="login-overlap" class="login-overlap hidden">
             <div id="loginform" class="login-form">
               <div class="login-content">
-                <span class="close-btn" onclick="clickbtn()">×</span>
+                <span class="close-btn" onclick="clickbtn()"
+                  ><img
+                    src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                    alt="*"
+                /></span>
                 <h3>Đăng Nhập</h3>
-                <input type="email" placeholder="Email" required />
-                <input type="password" placeholder="Mật khẩu" required />
-                <button>Đăng Nhập</button>
-                <a href="#">Quên mật khẩu?</a>
-                <button onclick="clickbtn2()" class="register-btn">
+                <input
+                  id="usernamelogin"
+                  type="email"
+                  placeholder="Tên đăng nhập"
+                  required
+                />
+                <input
+                  id="pwlogin"
+                  type="password"
+                  placeholder="Mật khẩu"
+                  required
+                />
+                <button onclick="loginbtn(event)" class="submit">
+                  Đăng Nhập
+                </button>
+                <!-- <a href="#">Quên mật khẩu?</a> -->
+                <button onclick="showCreatForm()" class="register-btn">
                   Tạo tài khoản mới
                 </button>
-                <div id="creatform" class="creatform hidden">
-                  <div class="creat-content">
-                    <span class="close" onclick="clickbtn2()">×</span>
-                    <h3>Tạo tài khoản mới</h3>
-                    <input type="text" placeholder="Tên người dùng" required />
-                    <input
-                      type="email"
-                      placeholder="Email đăng nhập"
-                      required
-                    />
-                    <input
-                      type="text"
-                      name=""
-                      placeholder="Mật khẩu"
-                      required
-                    />
-                    <button>Quay lại trang đang nhập</button>
-                    <button>Xác nhận</button>
-                  </div>
+                <div
+                  id="message"
+                  style="
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-family: 'Pacifico', cursive;
+                  "
+                ></div>
+              </div>
+            </div>
+            <!--  -->
+            <div id="creatform" class="login-form hidden">
+              <div class="login-content">
+                <span class="close-btn" onclick="clickbtn()"
+                  ><img
+                    src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                    alt="*"
+                /></span>
+                <h3 id="textCreat">Đăng ký</h3>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Họ tên"
+                  required
+                />
+                <input
+                  id="username"
+                  name="user-name"
+                  type="text"
+                  placeholder="Tên đăng nhập"
+                  required
+                />
+                <input
+                  oninput="OtpButton()"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  id="password"
+                  type="text"
+                  placeholder="Mật khẩu"
+                  required
+                />
+                <input
+                  id="confirmpassword"
+                  name="password"
+                  type="text"
+                  placeholder="Nhập lại mật khẩu"
+                  required
+                />
+                <div class="form-otp">
+                  <input id="otp" type="text" placeholder="OTP" />
+                  <button
+                    disabled
+                    style="opacity: 0.5; cursor: not-allowed"
+                    id="sendOtpBtn"
+                    onclick="sendOtp()"
+                    class="submit"
+                  >
+                    Gửi mã OTP
+                  </button>
                 </div>
+                <button
+                  id="buttonCreat"
+                  onclick="confirm(event)"
+                  class="submit"
+                >
+                  Đăng ký
+                </button>
+                <button
+                  id="buttonLogin"
+                  onclick="showLoginForm()"
+                  class="register-btn"
+                >
+                  Quay lại đăng nhập
+                </button>
+                <div
+                  id="message"
+                  style="
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-family: 'Pacifico', cursive;
+                  "
+                ></div>
+              </div>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <div class="cacdvukhac">
+          <button class="btn" onclick="opencart()">
+            <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png" />
+            <p>Giỏ hàng</p>
+          </button>
+          <div id="cart-overlap" class="login-overlap hidden">
+            <div class="login-form">
+              <div class="login-content">
+                <span class="close-btn" onclick="opencart()">
+                  <img
+                    src="/petshop-web/frontend/resources/image/icons8-close-96.png"
+                    alt="*"
+                  />
+                </span>
+                <h3>Giỏ hàng của bạn</h3>
+                <div id="cart-items" class="wishlist-items"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="cacdvukhac">
-          <a href="cart.html">
-            <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png" />
-            <p>Giỏ Hàng</p>
-          </a>
-        </div>
       </div>
-
+     <!-- -->
       <nav class="menu">
         <ul>
           <li>
@@ -188,5 +324,7 @@
 
      <script src="/petshop-web/frontend/resources/script/dog/dogscript.js"></script>
     </footer>
+        <script src="/petshop-web/frontend/resources/script/homescript.js"></script>
+    <script src="/petshop-web/frontend/resources/script/home.js"></script>
   </body>
 </html>

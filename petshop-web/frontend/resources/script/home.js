@@ -125,7 +125,8 @@ async function showUserInfo(user) {
     document.getElementById("buttonLogin").style.display = "block";
     document.getElementById("sendOtpBtn").style.display = "block";
     document.getElementById("otp").style.display = "block";
-
+    
+    location.reload();
     // Hiển thị lại form đăng nhập
     showLoginForm();
   }
