@@ -218,7 +218,7 @@
 .view-button {
   margin-top: 6px;
   padding: 4px 10px;
-  background-color: #007bff;
+  background-color: #072647;
   border: none;
   color: white;
   font-size: 13px;
@@ -236,15 +236,22 @@
   height: 50px;
   object-fit: cover;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .product-info {
+   
   flex: 1;
 }
 
+.namesearch {
+  font-size: 15px;
+  font-weight: bold;
+  color: #105a0e;
+  font-style: italic;
+}
 .product-price {
-  color: #e91e63;
+  color: red;
   font-weight: bold;
 }
 .hidden {
@@ -523,7 +530,7 @@ img:hover {
 .chitiet {   
     height: 26px;
     border-radius: 25px;
-    background-color: coral;
+    background-color: rgb(234, 28, 72);
     border: none;
     color: white;
     transition: background-color 0.3s ease ;
@@ -532,4 +539,71 @@ img:hover {
     background-color: white;
     color: rgb(239, 56, 32);
     border: 2px solid rgb(149, 32, 239);
+}
+
+
+
+
+ /*WishList */
+ .wishlist-items {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    max-height: 400px; 
+    overflow-y: auto; 
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  .items {
+    display: flex;          
+    align-items: center;    
+    gap: 20px;            
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 6px;
+  }
+#cart {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px; 
+    overflow-y: auto;
+    gap: 10px; /* khoảng cách giữa các item cho đẹp hơn */
+    padding-right: 5px; 
+    /* overflow-x: hidden; */
+  }
+  /*Payment*/
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  .text {
+    padding: 20px;
+  }
+
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF6F61; 
+  margin-bottom: 5px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.price {
+  font-size: 18px;
+  color: #2E8B57; 
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.brand {
+  font-size: 16px;
+  color: #037179;
+  font-weight: 300;
+  font-style: italic;
 }

@@ -200,7 +200,7 @@ async function handleTyping() {
       <div class="suggestion-item">
         <img src="${p.imageproduct}" alt="${p.name}" class="product-image"/>
         <div class="product-info">
-          <strong>${p.name}</strong><br />
+          <p class="namesearch">${p.name}</p><br />
           <span class="product-price">Giá: ${p.price.toLocaleString()} đ</span>
           <button class="view-button" onclick="viewProduct('${p.idProduct}')">Xem</button>
         </div>

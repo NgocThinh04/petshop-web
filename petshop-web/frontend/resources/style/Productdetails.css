@@ -305,19 +305,19 @@
 
 .divbody {
     width: 80%;
-    height: 600px;
+    height: 0px;
     margin: 50px auto;
     display: flex;
     gap: 25px;
 }
 
 .divanh {
-    flex: 2;
+    flex: 1;
 }
 
 .img {
     width: 100%;
-    height: 100%;
+    height: 50%;
     object-fit: contain; 
     display: block;
     transition: transform 0.3s ease ;
@@ -359,6 +359,8 @@ img:hover {
     color: rgb(210, 180, 30);
 }
 .button {
+    text-align: center;
+    justify-content: center;
     height: 50px;
     border-radius: 25px;
     background-color: coral;
@@ -411,3 +413,5 @@ img:hover {
   .text {
     padding: 20px;
   }
+
+  

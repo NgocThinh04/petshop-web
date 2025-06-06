@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dog</title>
     <link
       rel="stylesheet"
-      href="/petshop-web/frontend/resources/style/Productdetails.css"
+      href="/petshop-web/frontend/resources/style/cat.css"
     />
     <link
       rel="stylesheet"
       href="/petshop-web/frontend/resources/style/exchange.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/petshop-web/frontend/resources/style/cat.css"
     />
   </head>
   <body>
@@ -296,145 +292,79 @@
           <li>
             <a href="/petshop-web/frontend/view/dog/dog.html">Chó</a>
             <div class="divmenu">
-              <a href="/petshop-web/frontend/view/dog/doghygiene.html"
-                >Chăm sóc vệ sinh cún</a
-              >
-              <a href="/petshop-web/frontend/view/dog/dogfood.html"
-                >Thức ăn cho cúnn</a
-              >
-              <a href="/petshop-web/frontend/view/dog/dogcake.html"
-                >Bánh Thưởng</a
-              >
-              <a href="/petshop-web/frontend/view/dog/dogaccessoriestoys.html"
-                >Phụ Kiện và đồ chơi</a
-              >
-              <a href="/petshop-web/frontend/view/dog/doghealthcare.html"
-                >Chăm Sóc Sức Khỏe Cún</a
-              >
-              <a href="/petshop-web/frontend/view/dog/dogtransportcage.html"
-                >Vận Chuyển</a
-              >
+              <a href="/petshop-web/frontend/view/dog/doghygiene.html">Chăm sóc vệ sinh cún</a>
+              <a href="/petshop-web/frontend/view/dog/dogfood.html">Thức ăn cho cúnn</a>
+              <a href="/petshop-web/frontend/view/dog/dogcake.html">Bánh Thưởng</a>
+              <a href="/petshop-web/frontend/view/dog/dogaccessoriestoys.html">Phụ Kiện và đồ chơi</a>
+              <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm Sóc Sức Khỏe Cún</a>
+              <a href="/petshop-web/frontend/view/dog/dogtransportcage.html">Vận Chuyển</a>
             </div>
           </li>
           <li>
             <a href="/petshop-web/frontend/view/cat/cat.html">Mèo</a>
             <div class="divmenu">
-              <a href="/petshop-web/frontend/view/cat/catfood.html"
-                >Thức ăn cho mèo</a
-              >
-              <a href="/petshop-web/frontend/view/cat/accessoriestoys.html"
-                >Phụ Kiện và đồ chơi</a
-              >
-              <a href="/petshop-web/frontend/view/cat/healthcare.html"
-                >Chăm Sóc Sức Khỏe</a
-              >
-              <a href="/petshop-web/frontend/view/cat/transportcage.html"
-                >Vận Chuyển-Chuồng</a
-              >
+              <a href="/petshop-web/frontend/view/cat/catfood.html">Thức ăn cho mèo</a>
+              <a href="/petshop-web/frontend/view/cat/accessoriestoys.html">Phụ Kiện và đồ chơi</a>
+              <a href="/petshop-web/frontend/view/cat/healthcare.html">Chăm Sóc Sức Khỏe</a>
+              <a href="/petshop-web/frontend/view/cat/transportcage.html">Vận Chuyển-Chuồng</a>
               <a href="/petshop-web/frontend/view/cat/hygiene.html">Vệ sinh</a>
             </div>
           </li>
+          <li><a href="/petshop-web/frontend/view/newproducts.html">Hàng mới về</a></li>
           <li>
-            <a href="/petshop-web/frontend/view/newproducts.html"
-              >Hàng mới về</a
-            >
-          </li>
-          <li>
-            <a href="/petshop-web/frontend/view/smart/smart.html"
-              >Thiết bị thông minh
-            </a>
+            <a href="/petshop-web/frontend/view/smart/smart.html">Thiết bị thông minh </a>
             <div class="divmenu">
-              <a href="/petshop-web/frontend/view/smart/feeder.html"
-                >Máy ăn uống tự động</a
-              >
-              <a href="/petshop-web/frontend/view/smart/pet-toilet.html"
-                >Nhà vệ sinh tự động</a
-              >
+              <a href="/petshop-web/frontend/view/smart/feeder.html">Máy ăn uống tự động</a>
+              <a href="/petshop-web/frontend/view/smart/pet-toilet.html">Nhà vệ sinh tự động</a>
             </div>
           </li>
-          <li>
-            <a href="/petshop-web/frontend/view/trademark.html">Thương hiệu</a>
-          </li>
+          <li><a href="/petshop-web/frontend/view/trademark.html">Thương hiệu</a></li>
           <li><a href="/petshop-web/frontend/view/contact.html">Liên hệ</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="divbody">
-      <div class="divanh">
-        <img id="img" class="img" />
-      </div>
-      <div class="divthongtin">
-        <p>Tên sản phẩm</p>
-        <h1 id="namee"></h1>
-        <p>Thương hiệu:</p>
-        <p1 id="brandd" value=""></p1>
-        <p>Giá bán</p>
-        <h2 id="costtt"></h2>
-        <p>Số lượng:</p>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 120px;
-            height: 55px;
-            gap: 10px;
-            border: 1px solid red;
-            border-radius: 30px;
-          "
-        >
-          <button
-            onclick="changeQuantity(-1)"
-            style="background-color: transparent; border: none; font-size: 30px"
-          >
-            -
-          </button>
-          <input
-            type="text"
-            id="quantity"
-            value="1"
-            style="border: none; width: 40px; text-align: center"
-            readonly
-          />
-          <button
-            onclick="changeQuantity(1)"
-            style="background-color: transparent; border: none; font-size: 30px"
-          >
-            +
-          </button>
+
+      <h2 class="title">Hàng mới về</h2>
+    <div id="product-list" class="divbody">
+      <div class="productlist">
+        
+        <div id="productlist" class="productlist1">
+          <div style="display: none;" id="product" class="productlist1child">
+            <img class="img" src="" />
+            <div>
+              <p class="name"></p>
+              <p class="brand"></p>
+              <p class="price" style="color: crimson; font-weight: bold"></p>
+              <button class="chitiet">Chi tiết sản phẩm</button>
+            </div>
+          </div>
+          </div>
+         </div>
         </div>
-        <p id="total">Tổng số tiền:</p>
-        <button onclick="addCart()" id="cart" class="button">
-          Thêm vào giỏ hàng
-        </button>
-        <button onclick="addWishlist(productid)" id="wishlist" class="button">
-          Wishlist
-        </button>
       </div>
     </div>
-
     <footer class="foot">
-      <div class="footchild">
-        <h2>Thành viên Paddiers</h2>
-        <p>
-          Đăng ký thành viên ngay hôm nay để nhận email về sản phẩm mới và
-          chương trình khuyến mãi của Paddy
-        </p>
-        <div class="footchild1">
-          <input type="text" placeholder="Email của bạn..." />
-          <button type="submit">Đăng Ký</button>
+        <div class="footchild">
+            <h2>Thành viên Paddiers</h2>
+            <p>
+                Đăng ký thành viên ngay hôm nay để nhận email về sản phẩm mới và
+                chương trình khuyến mãi của Paddy
+            </p>
+            <div class="footchild1">
+                <input type="text" placeholder="Email của bạn..." />
+                <button type="submit">Đăng Ký</button>
+            </div>
         </div>
-      </div>
-      <div class="fulldvu">
-        <div class="fulldvuchild">
-          <b>Shop</b>
-          <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
-          <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
-          <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
-        </div>
+        <div class="fulldvu">
+            <div class="fulldvuchild">
+                <b>Shop</b>
+                <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
+                <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
+                <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
+            </div>
 
-       <div class="fulldvuchild">
+            <div class="fulldvuchild">
                 <b>Paddy Pet Shop</b>
                 <a href="/petshop-web/frontend/view/contact.html">Giới Thiệu</a>
                 <a href="/petshop-web/frontend/view/foodpage/member.html">Thành Viên Paddier</a>
@@ -449,58 +379,39 @@
                 <a href="/petshop-web/frontend/view/foodpage/payment.html">Phương Thức Thanh Toán</a>
                 <a href="/petshop-web/frontend/view/foodpage/refund.html">Chính Sách Hoàn Tiền</a>
             </div>
-        <div class="fulldvuchild">
-          <b>Liên Hệ</b>
-          <p>Kiến Trúc Hà Nội</p>
-          <p>XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội, Việt Nam</p>
+            <div class="fulldvuchild">
+                <b>Liên Hệ</b>
+                <p>Kiến Trúc Hà Nội</p>
+                <p>
+                    XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội,
+                    Việt Nam
+                </p>
 
-          <p>
-            <span class="icons"></span>
-            <img
-              src="/petshop-web/frontend/resources/image/telephone-call.png"
-              width="20px"
-              class="icon"
-              alt=""
-            />
-            Hotline: 0867677891
-          </p>
-          <p>
-            <span class="icons"></span>
-            <img
-              src="/petshop-web/frontend/resources/image/email.png"
-              width="20px"
-              class="icon"
-              alt=""
-            />Email: contact@paddy.vn
-          </p>
-          <p>
-            <span class="icons"></span>
-            <img
-              src="/petshop-web/frontend/resources/image/facebook.png"
-              width="20px"
-              class="iconn"
-              alt=""
-            />
-            <img
-              src="/petshop-web/frontend/resources/image/tiktok.png"
-              width="20px"
-              class="iconn"
-              alt=""
-            />
-            <img
-              src="/petshop-web/frontend/resources/image/youtube.png"
-              width="20px"
-              class="iconn"
-              alt=""
-            />
-          </p>
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/telephone-call.png" width="20px" class="icon"
+                        alt="">
+                    Hotline: 0867677891
+                </p>
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/email.png" width="20px" class="icon" alt="">Email:
+                    contact@paddy.vn
+                </p>
+                <p>
+                    <span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/facebook.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/tiktok.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/youtube.png" width="20px" class="iconn" alt="">
+                </p>
+
+
+            </div>
         </div>
-      </div>
     </footer>
     <script src="/petshop-web/frontend/resources/script/address-seletor.js"></script>
-    <script src="/petshop-web/frontend/resources/script/cat/catfoodscript.js"></script>
     <script src="/petshop-web/frontend/resources/script/Productdetails.js"></script>
-    <script src="/petshop-web/frontend/resources/script/homescript.js"></script>
     <script src="/petshop-web/frontend/resources/script/home.js"></script>
+    <script src=" /petshop-web/frontend/resources/script/homescript.js"></script>
+
+    <script src="/petshop-web/frontend/resources/script/newproductsscript.js"></script>
   </body>
 </html>
