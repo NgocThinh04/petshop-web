@@ -155,22 +155,12 @@ function addCart() {
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
   cart = cart.map(id => Number(id));
-  const existingProduct = cart.find(item => item.idProduct === productid);
-
-  if (existingProduct) {
-    // Nếu có thì tăng quantity lên 1
-    existingProduct.quantity += 1;
-  } else {
-    // Nếu chưa có thì thêm mới
-    cart.push({ idProduct: productId, quantity: 1 });
+  const cartProductId = Number(productData.id);
+  if(cart.includes(cartProductId)) {
+      alert("Sản phẩm đã có trong giỏ hàng.");
+      return;
   }
-  // const cartProductId = Number(productData.id);
-  // if(cart.includes(cartProductId)) {
-  //     alert("Sản phẩm đã có trong giỏ hàng.");
-  //     return;
-  // }
-
-  // cart.push(cartProductId);
+  cart.push(cartProductId);
   localStorage.setItem(cartKey, JSON.stringify(cart));
   alert("Đã thêm vào giỏ hàng!");
   renderCart();

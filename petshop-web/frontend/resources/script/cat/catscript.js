@@ -13,6 +13,10 @@ fetch("http://localhost:8080/api/cat")
             clone.querySelector(".name").textContent = product.name || "Tên sản phẩm";
             clone.querySelector(".price").textContent = product.price || " Chưa cập nhật";
             clone.querySelector(".brand").textContent = product.brand || "Thương hiệu";
+            clone.querySelector(".chitiet").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = `/petshop-web/frontend/view/Productdetails.html?id=${product.idProduct}`;
+      });
             productlist.appendChild(clone);
         });
     })

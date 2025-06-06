@@ -1,0 +1,368 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+   background-color: rgb(55, 55, 185);
+   padding: 33px 30px 0px 100px;
+   display: flex;
+   height: 140px;
+   flex-direction: column;
+   row-gap: 20px;
+}
+
+.headerFrame1 {
+    gap: 20px;
+    display: flex; 
+    height: 50px; 
+    width: 95%;
+     justify-content: space-between;
+}
+
+.headerFrame1 img {
+    width: 150px;
+}
+
+.headerFrame1 input {
+    width: 650px;
+    border-radius: 7px;
+    border: 0px;
+}
+
+.hotline {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+
+.cacdvukhac {
+    text-align: center;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    width: 50px;
+    height: 50px;
+    row-gap: 8px;
+    /* margin-left: 25px; */
+}
+.cacdvukhac p {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cacdvukhac img {
+    height: 50px;
+    width: 50px;
+}
+.cacdvukhac a {
+    color: white;
+    text-decoration: none;
+}
+/* nav {
+    margin: 0 180px;
+    font-size: 22px;
+    box-sizing:  border-box;
+    font-family: 'Pacifico', cursive;
+} */
+.menu {
+   display: flex;
+   justify-content: center;
+
+}
+
+.menu ul {
+   display: flex;
+   width: 85%;
+   justify-content: center;
+   gap: 50px;
+}
+
+.menu ul li {
+        list-style-type: none;
+        width: auto;
+        text-align: center;
+        height: 35px;
+}
+
+.menu ul li a:hover {
+  border-bottom: 3px solid white; 
+}
+
+.menu ul li a {
+        text-decoration: none;
+         color: white;
+         font-size: 20px;
+        font-family: 'Pacifico', cursive;
+}
+
+
+.divmenu {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  row-gap: 10px;
+  color: black;
+  text-align: left;
+  border-radius: 10px;            
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);  
+  border: none;   
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  margin-top: 8px;
+  padding: 0 20px;
+}
+
+.menu ul li:hover .divmenu {
+  opacity: 1;
+  max-height: 500px;
+  padding: 20px;
+}
+
+.search {
+    align-items: center;
+    display: flex;
+}
+
+
+.search input {
+    height: 50px;
+    padding: 8px 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+ .search input[type="text"] {
+    padding: 8px 15px;
+    font-size: 17px;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+
+.search button {
+    height: 50px;
+    background: whitesmoke;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.search img {
+    width: 30px;
+}
+
+.title {
+   text-align: center;
+   font-size: 45px;
+   font-family: 'Pacifico', cursive;
+   font-weight: bold;
+   margin-top: 20px;
+   color: chocolate;
+}
+
+.Content {
+    margin-top: 100px;
+     width: 70%;
+    margin-left: 150px;
+
+}
+
+.Content h2 {
+    margin-top: 7px;
+}
+.Content p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+.Content ul  {
+    
+    margin-top: 30px;
+}
+.Content ul a {
+    text-decoration: none;
+         color: rgb(210, 52, 16);
+         font-size: 27px;
+}
+.Content ul li {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 50px;
+    font-family: 'Pacifico', cursive;
+    padding: 10px 0px;
+}
+
+
+.foot {
+    padding: 20px 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 570px;
+    background-color: whitesmoke;
+    align-items: center;
+}
+
+.footchild {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footchild h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(35, 35, 157);
+}
+
+.footchild p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.footchild1 {
+    display: flex;
+    gap: 20px;
+    height: 45px;
+    margin-top: 30px;
+    width: 100%;
+}
+.footchild1 input[type="text"] {
+    padding: 8px 15px;
+    outline: none;
+    font-size: 20px;
+}
+.footchild1 input {
+    width: 80%;
+    border-radius: 7px;
+    border: 1px solid yellow;
+}
+.footchild1 button {
+    width: 20%;
+    border-radius: 15px;
+    border: 0px;
+    color: white;
+    background-color: darkslateblue;
+
+}
+
+.footchild1 button:hover {
+    background-color: black;
+}
+
+.fulldvu {
+    display: flex;
+    margin-top: 50px;
+    height: 65%;
+    width: 100%;
+}
+.fulldvuchild {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: left;
+}
+.fulldvuchild a {
+    
+    text-decoration: none;
+    color: rgb(97, 19, 2);
+}
+.fulldvuchild a:hover {
+    text-decoration: underline  ;
+    color: rgb(7, 79, 234);
+}
+/* Login */
+
+.login-box {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+.login-box h1 {
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    border: none;
+    width: 100%;
+    height: 50px;
+    border: blue;
+    margin: 30px 0;
+
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 20px 10px 20px;
+}
+.input-box img {
+    position: absolute;
+    top: 27%;
+    left: 240px;
+    height: 20px;
+    transform: translate(-50%);
+}
+.login-box .forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: -15px 0 15px;
+}
+.forgot label input {
+    color: black;
+}
+.forgot a {
+    color: black;
+    text-decoration: none;
+}
+.forgot a:hover {
+    text-decoration: underline;
+}
+.login-box .btn{
+    width: 100%;
+    height: 45px;
+    background: wheat;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 700;
+}
+.login-box .creat-account{
+    font-size: 16.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+.creat-account p a{
+    color: black;
+    text-decoration: none;
+    font-weight: 540;
+}
+/* .creat-account p a:hover */

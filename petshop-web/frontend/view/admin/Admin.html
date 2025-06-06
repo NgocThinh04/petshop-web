@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar Hover</title>
-    <link
-      rel="stylesheet"
-      href="/petshop-web/frontend/resources/style/Admin/admin.css"
-    />
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <div class="container">
-      <div class="sidebar">
-        <div class="admin">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/6024/6024190.png"
-            class="admin-icon"
-          />
-          <h2>Admin</h2>
-        </div>
-        <button class="menu-item" onclick="showContent('dashboard')">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/893/893220.png"
-            alt="home"
-            class="menu-icon"
-          />
-          <p class="menu-text">Information</p>
-        </button>
-
-        <button class="menu-item" onclick="showContent('product')">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3460/3460473.png"
-            alt="docs"
-            class="menu-icon"
-          />
-          <p class="menu-text">Petservice</p>
-        </button>
-
-        <button class="menu-item" onclick="showContent('smart')">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/10651/10651082.png"
-            alt="analytics"
-            class="menu-icon"
-          />
-          <p class="menu-text">smartdevice</p>
-        </button>
-
-        <button class="menu-item" onclick="showContent('user')">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/1256/1256650.png"
-            alt="settings"
-            class="menu-icon"
-          />
-          <p class="menu-text">Userservice</p>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Hover</title>
+  <link
+    rel="stylesheet"
+    href="/petshop-web/frontend/resources/style/Admin/admin.css" 
+      />
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div class="container">
+    <div class="sidebar">
+        
+      <div class="admin">
+         <img src="https://cdn-icons-png.flaticon.com/128/6024/6024190.png" class="admin-icon">
+         <h2>Admin</h2>
       </div>
-      <div class="main-content" id="mainContent"></div>
+      <button class="menu-item" onclick="showContent('dashboard')">
+  <img src="https://cdn-icons-png.flaticon.com/128/893/893220.png" alt="home" class="menu-icon">
+  <p class="menu-text">Information</p>
+</button>
+
+<button class="menu-item" onclick="showContent('product')">
+  <img src="https://cdn-icons-png.flaticon.com/128/3460/3460473.png" alt="docs" class="menu-icon">
+  <p class="menu-text">Petservice</p>
+</button>
+
+<button class="menu-item" onclick="showContent('smart')">
+  <img src="https://cdn-icons-png.flaticon.com/128/10651/10651082.png" alt="analytics" class="menu-icon">
+  <p class="menu-text">smartdevice</p>
+</button>
+
+<button class="menu-item" onclick="showContent('user')">
+  <img src="https://cdn-icons-png.flaticon.com/128/1256/1256650.png" alt="settings" class="menu-icon">
+  <p class="menu-text">Userservice</p>
+</button>
+<button class="menu-item" onclick="showContent('bill')">
+  <img src="https://cdn-icons-png.flaticon.com/128/6489/6489834.png" alt="settings" class="menu-icon">
+  <p class="menu-text">BillProduct</p>
+</button>
+
     </div>
-    <!-- <script src="/petshop-web/frontend/resources/script/admin/ProductAD.js"></script> -->
-    <script src="/petshop-web/frontend/resources/script/admin/admin.js"></script>
-    <script src="/petshop-web/frontend/resources/script/admin/ProductAD.js"></script>
-  </body>
+     <div class="main-content" id="mainContent">
+
+    </div>
+  </div>
+  <script src="/petshop-web/frontend/resources/script/admin/admin.js"></script>
+  <script src="/petshop-web/frontend/resources/script/admin/ProductAD.js"></script>
+</body>
 </html>

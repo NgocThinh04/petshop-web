@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính sách - Đổi trả hàng</title>
+    <link rel="stylesheet" href="/petshop-web/frontend/resources/style/exchange.css" />
+    <link
+      rel="stylesheet"
+      href="/petshop-web/frontend/resources/style/cat.css"
+    />
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerFrame1">
+            <a href="/petshop-web/frontend/view/home.html">
+                <img src="/petshop-web/frontend/resources/image/logo.avif" />
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                    <img src="/petshop-web/frontend/resources/image/search.png" alt="#" />
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6924/6924546.png" />
+                    <p>Wishlist</p>
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/16470/16470836.png" />
+                    <p>Đăng nhập</p>
+                </button>
+                <script src="/petshop-web/frontend/resources/script/home.js"></script>
+                <div id="login-overlap" class="login-overlap hidden">
+                    <div id="loginform" class="login-form">
+                        <div class="login-content">
+                            <span class="close-btn" onclick="clickbtn()">×</span>
+                            <h3>Đăng Nhập</h3>
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Mật khẩu" required />
+                            <button>Đăng Nhập</button>
+                            <a href="#">Quên mật khẩu?</a>
+                            <button onclick="clickbtn2()" class="register-btn">
+                                Tạo tài khoản mới
+                            </button>
+                            <div id="creatform" class="creatform hidden">
+                                <div class="creat-content">
+                                    <span class="close" onclick="clickbtn2()">×</span>
+                                    <h3>Tạo tài khoản mới</h3>
+                                    <input type="text" placeholder="Tên người dùng" required />
+                                    <input type="email" placeholder="Email đăng nhập" required />
+                                    <input type="text" name="" placeholder="Mật khẩu" required />
+                                    <button>Quay lại trang đang nhập</button>
+                                    <button>Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cacdvukhac">
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png" />
+                    <p>Giỏ Hàng</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/petshop-web/frontend/view/dog/dog.html">Chó</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm sóc vệ sinh cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogfood.html">Thức ăn cho cúnn</a>
+                        <a href="/petshop-web/frontend/view/dog/dogcake.html">Bánh Thưởng</a>
+                        <a href="/petshop-web/frontend/view/dog/dogaccessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm Sóc Sức Khỏe Cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogtransportcage.html">Vận Chuyển</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/petshop-web/frontend/view/cat/cat.html">Mèo</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/cat/catfood.html">Thức ăn cho mèo</a>
+                        <a href="/petshop-web/frontend/view/cat/accessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/cat/healthcare.html">Chăm Sóc Sức Khỏe</a>
+                        <a href="/petshop-web/frontend/view/cat/transportcage.html">Vận Chuyển-Chuồng</a>
+                        <a href="/petshop-web/frontend/view/cat/hygiene.html">Vệ sinh</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/newproducts.html">Hàng mới về</a></li>
+                <li>
+                    <a href="/petshop-web/frontend/view/smart/smart.html">Thiết bị thông minh </a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/smart/feeder.html">Máy ăn uống tự động</a>
+                        <a href="/petshop-web/frontend/view/smart/pet-toilet.html">Nhà vệ sinh tự động</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/trademark.html">Thương hiệu</a></li>
+                <li><a href="/petshop-web/frontend/view/contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="Content">
+        <div class="voucher-info">
+            <p>Chào mừng bạn đến với thế giới của Paddy, bạn sẽ có cơ hội nhận được voucher giảm <span
+                    class="highlight">20%</span> </p>
+        </div>
+        <h2>PADDY TUYỂN DỤNG VIỆC LÀM</h2>
+        <br>
+        <br>
+        <a style="color: rgb(251, 53, 53); font-weight: bold;">
+            <ul>Paddy Pet Shop mở tuyển dụng các vị trí - Cập nhật tháng 3/2025</ul>
+            <ol type="I">
+                <li>Nhân viên Kế toán tổng hợp (Fulltime) | 1 vị trí</li>
+
+                <li>Nhân viên Bán hàng (Parttime/Fulltime)</li>
+
+                <li>Nhân viên Đóng gói & Kho (Parttime/Fulltime)</li>
+
+                <li>Nhân viên Livestream (Ca tối 18h-21h) | 2 vị trí</li>
+
+                <li>Nhân viên Quản lý sản phẩm (Fulltime) | 1 vị trí</li>
+            </ol>
+        </a>
+        <br>
+        <h3>Mô tả chi tiết công việc</h3>
+        <br>
+        <a style="color: blue;">I. Nhân Viên Kế Toán Tổng Hợp (Fulltime) </a>
+        <ul>
+            <b>Mô tả công việc:</b>
+            <li>Làm việc tại 412/3 Nơ Trang Long, P13, Q. Bình Thạnh</li>
+            <li>Quản lý và kiểm soát toàn bộ nghiệp vụ kế toán của doanh nghiệp, bao gồm các công việc liên quan
+                đến kế toán thuế, kế toán tài chính và kế toán quản trị.</li>
+            <li>Kiểm tra và đảm bảo tính chính xác, hợp lý của các chứng từ, hóa đơn liên quan đến các giao dịch tài
+                chính.</li>
+            <li>Lập và phân tích báo cáo tài chính định kỳ (hàng tháng, hàng quý, hàng năm) theo yêu cầu của ban lãnh
+                đạo và các cơ quan nhà nước.</li>
+            <li>Theo dõi, đối chiếu và kiểm tra công nợ phải thu, phải trả.</li>
+            <li>Thực hiện các công việc liên quan đến quyết toán thuế, làm việc với cơ quan thuế và các tổ chức tài
+                chính liên quan.</li>
+            <li>Hỗ trợ trong việc xây dựng, duy trì và cải tiến các quy trình kế toán, đảm bảo tính minh bạch và hiệu
+                quả trong hoạt động kế toán của doanh nghiệp.</li>
+            <li>Cập nhật và áp dụng các quy định, chính sách mới về tài chính, kế toán, thuế vào công việc hàng ngày.
+            </li>
+            <li>Thực hiện các nhiệm vụ khác theo sự phân công của cấp trên.</li>
+            <b>Yêu cầu ứng viên</b>
+            <li>Tốt nghiệp đại học chuyên ngành Kế toán, Tài chính, Kiểm toán hoặc các chuyên ngành liên quan.</li>
+            <li>Có ít nhất 1-2 năm kinh nghiệm làm việc trong lĩnh vực kế toán tổng hợp, ưu tiên ứng viên có kinh
+                nghiệm làm việc tại các công ty thương mại, bán lẻ.</li>
+            <li>Am hiểu về các quy định pháp luật liên quan đến kế toán, thuế và tài chính.</li>
+            <li>Có khả năng sử dụng thành thạo các phần mềm kế toán (ưu tiên phần mềm Misa) và Microsoft Office (Excel,
+                Word).</li>
+            <li>Có khả năng phân tích, tổng hợp và báo cáo số liệu tài chính một cách chính xác và kịp thời.</li>
+            <li>Có kỹ năng giao tiếp tốt, có khả năng làm việc độc lập và làm việc nhóm.</li>
+            <li>Có tinh thần trách nhiệm cao, cẩn thận, tỉ mỉ và có khả năng làm việc dưới áp lực cao.</li>
+            <b>Lương thưởng & Quyền lợi</b>
+            <li>Lương: 10.000.000 - 12.000.000 VNĐ/tháng (thỏa thuận theo năng lực)</li>
+            <li>Thưởng tháng 13, thưởng KPI hàng tháng theo hiệu quả công việc.</li>
+            <li>Được tham gia đầy đủ các chế độ bảo hiểm theo quy định của pháp luật.</li>
+            <li>Có cơ hội thăng tiến trong công việc và phát triển nghề nghiệp.</li>
+            <li>Được làm việc trong môi trường thân thiện, chuyên nghiệp và có cơ hội học hỏi, phát triển kỹ năng.</li>
+            <b>Hướng dẫn ứng tuyển</b>
+            <li>Điền form ứng tuyển ngay <a style="color: rgb(20, 111, 209); font-size: 17px;" href="#">TẠI ĐÂY</a></li>
+            <li>Có thể gửi thêm CV trực tiếp về Email: <a style="color: rgb(20, 111, 209); font-size: 17px;"
+                    href="mailto:abc@gmail.com">career@paddy.vn</a> với tiêu đề
+                mail [NVKT] Tên + SĐT</li>
+            <li>Inbox <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">Fanpage</a> nếu có thắc mắc về các vị
+                trí đang ứng
+                tuyển</li>
+        </ul>
+        <br>
+        <a style="color: blue;">II. Nhân Viên Bán Hàng (Partime/Fulltime)</a>
+        <ul>
+            <b>Mô tả công việc</b>
+            <li>Làm việc tại cửa hàng Paddy</li>
+            <li>Tư vấn & bán hàng</li>
+            <li>Thường xuyên kiểm tra & sắp xếp hàng hóa lên kệ</li>
+            <li>Hỗ trợ xử lý đơn hàng online</li>
+            <li>Các công việc khác theo sắp xếp của Trưởng ca</li>
+            <b>Yêu cầu ứng viên</b>
+            <li>Nhanh nhẹn, trung thực.</li>
+            <li>Có kinh nghiệm bán hàng hoặc kiến thức về mảng thú cưng là 1 lợi thế.</li>
+            <li>Ưu tiên đi làm ngay. Thử việc 1 tháng.</li>
+            <b>Lương thưởng & Quyền lợi</b>
+            <li>Lương khởi điểm 28.000VNĐ/giờ</li>
+            <li>Được chủ động sắp xếp lịch làm việc theo ca: Sáng - Chiều - Tối</li>
+            <li>Được hưởng các chính sách phúc lợi, xét tăng lương, thưởng Lễ/Tết theo quy định của công ty</li>
+            <li>Làm việc trong môi trường năng động, chuyên nghiệp có nhiều cơ hội thăng tiến</li>
+            <li>Được đào tạo công việc bài bản và kiến thức về mảng thú cưng</li>
+            <b>Hướng dẫn ứng tuyển</b>
+            <li>Điền form ứng tuyển ngay <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">TẠI ĐÂY</a></li>
+            <li>Có thể gửi thêm CV trực tiếp về Email: <a style="color: rgb(20, 111, 209);font-size: 17px"
+                    href="mailto:abc@gmail.com">career@paddy.vn</a> với tiêu đề
+                mail [NVBH] Tên + SĐT</li>
+            <li>Inbox <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">Fanpage</a> nếu có thắc mắc về các vị
+                trí đang ứng
+                tuyển</li>
+        </ul>
+        <br>
+        <a style="color: blue;">III. Nhân Viên Đóng Gói & Kho (Partime/Fulltime)</a>
+        <ul>
+            <b>Mô tả công việc</b>
+            <li>Đóng gói đơn hàng từ các sàn TMĐT theo tiêu chuẩn</li>
+            <li>Nhận hàng từ nhà phân phối và kiểm đếm</li>
+            <li>Đưa hàng hóa lên kho & trưng bày lên kệ</li>
+            <li>Kiểm kho thường xuyên</li>
+            <li>Các công việc khác theo sắp xếp của quản lý</li>
+            <b>Yêu cầu ứng viên</b>
+            <li>Có sức khỏe tốt, nhanh nhẹn, trung thực</li>
+            <li>Có kinh nghiệm về kho và các sàn thương mại điện tử là 1 lợi thế</li>
+            <b>Lương thưởng & Quyền lợi</b>
+            <li>Lương khởi điểm 28.000VNĐ/giờ</li>
+            <li>Được chủ động sắp xếp lịch làm việc theo ca: Sáng - Chiều - Tối</li>
+            <li>Được hưởng các chính sách phúc lợi, xét tăng lương, thưởng Lễ/Tết theo quy định của công ty</li>
+            <li>Làm việc trong môi trường năng động, chuyên nghiệp có nhiều cơ hội thăng tiến</li>
+            <li>Được đào tạo công việc bài bản và kiến thức về mảng thú cưng</li>
+            <b>Hướng dẫn ứng tuyển</b>
+            <li>Điền form ứng tuyển ngay <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">TẠI ĐÂY</a></li>
+            <li>Có thể gửi thêm CV trực tiếp về Email: <a style="color: rgb(20, 111, 209);font-size: 17px"
+                    href="mailto:abc@gmail.com">career@paddy.vn</a> với tiêu đề
+                mail [NVDG] Tên + SĐT</li>
+            <li>Inbox <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">Fanpage</a> nếu có thắc mắc về các vị
+                trí đang ứng
+                tuyển</li>
+        </ul>
+        <br>
+        <a style="color: blue;">IV. Nhân Viên Livestream (Ca tối 18h-21h)</a>
+        <ul>
+            <b>Mô tả công việc</b>
+            <li>Làm việc tại 412/3 Nơ Trang Long, P13, Q. Bình Thạnh</li>
+            <li>Livestream theo buổi 3 tiếng 18h-21h, 3-4 buổi/tuần, tuỳ chọn 1 trong 2 ca:
+                <ul>
+                    <li>1. Ca 1: Thứ 2 - 4 - 6 - (CN)</li>
+                    <li>2. Ca 2: Thứ 3 - 5 - 7 - (CN)</li>
+                </ul>
+            </li>
+            <li>Livestream giới thiệu và bán hàng các sản phẩm thú cưng (thức ăn và phụ kiện);</li>
+            <li>Thực hiện đầy đủ các buổi livestream theo lịch đã đăng ký;</li>
+            <li>Giới thiệu sản phẩm sinh động, thu hút, cung cấp thông tin chi tiết và chính xác về sản phẩm;</li>
+            <li>Tương tác với khách hàng trong suốt buổi livestream, giải đáp thắc mắc và khuyến khích khách tham gia
+                vào các hoạt động mua sắm/mini game.</li>
+            <b>Yêu cầu ứng viên</b>
+            <li>Ăn nói lưu loát, tự tin trước ống kính;</li>
+            <li>Chịu khó học hỏi và thái độ làm việc nghiêm túc;</li>
+            <li>Có kinh nghiệm về livestream hoặc bán hàng trực tuyến là một lợi thế;</li>
+            <li>Yêu thích thú cưng và có kiến thức về sản phẩm chăm sóc thú cưng là một lợi thế.</li>
+            <b>Lương thưởng & Quyền lợi</b>
+            <li>Lương khởi điểm: Thứ 2 - Thứ 7: 150.000VNĐ/buổi, Chủ nhật: 200.000VNĐ/buổi;</li>
+            <li>Cơ hội để phát triển kỹ năng giao tiếp và bán hàng;</li>
+            <li>Làm việc trong môi trường năng động, nhiều cơ hội phát triển nghề nghiệp;</li>
+            <li>Được đào tạo cho nhân viên chưa có kinh nghiệm về mảng thú cưng.</li>
+            <b>Hướng dẫn ứng tuyển</b>
+            <li>Điền form ứng tuyển ngay <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">TẠI ĐÂY</a></li>
+            <li>Có thể gửi thêm CV trực tiếp về Email: <a style="color: rgb(20, 111, 209);font-size: 17px"
+                    href="mailto:abc@gmail.com">career@paddy.vn</a> với tiêu đề
+                mail [NVLS] Tên + SĐT</li>
+            <li>Inbox <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">Fanpage</a> nếu có thắc mắc về các vị
+                trí đang ứng
+                tuyển</li>
+
+        </ul>
+        <br>
+        <a style="color: blue;">V. Nhân Viên Quản Lý Sản Phẩm (Fulltime)</a>
+        <ul>
+            <b>Mô tả công việc</b>
+            <li>Phát triển và quản lý danh mục sản phẩm thuộc ngành hàng thú cưng trên các kênh bán hàng của công ty
+                (cửa hàng offline, thương mại điện tử...).</li>
+            <li>Nghiên cứu, phân tích thị trường và xu hướng tiêu dùng để đưa ra các quyết định về phát triển sản phẩm
+                mới, tối ưu hóa danh mục sản phẩm hiện tại.</li>
+            <li>Lập kế hoạch và triển khai các chiến dịch quảng bá, khuyến mãi nhằm tăng doanh số bán hàng, nâng cao
+                nhận thức thương hiệu.</li>
+            <li>Phối hợp với các phòng ban liên quan (marketing, logistics, chăm sóc khách hàng) để đảm bảo hoạt động
+                kinh doanh diễn ra suôn sẻ và hiệu quả.</li>
+            <li>Theo dõi, phân tích và báo cáo hiệu quả kinh doanh của từng sản phẩm, đề xuất các giải pháp cải tiến.
+            </li>
+            <li>Quản lý tồn kho, đảm bảo hàng hóa luôn có sẵn để đáp ứng nhu cầu của khách hàng.</li>
+            <li>Xây dựng và duy trì mối quan hệ với các nhà cung cấp, đàm phán các điều khoản hợp đồng, đảm bảo lợi ích
+                tốt nhất cho công ty.</li>
+            <li>Giám sát và đảm bảo chất lượng sản phẩm đáp ứng tiêu chuẩn của công ty và mong đợi của khách hàng.</li>
+            <li>Tham gia vào quá trình xây dựng và phát triển chiến lược kinh doanh dài hạn cho ngành hàng của công ty.
+            </li>
+            <b>Yêu cầu ứng viên</b>
+            <li>Tốt nghiệp Đại học chuyên ngành Kinh tế, Quản trị kinh doanh, Thương mại điện tử hoặc các ngành liên
+                quan.</li>
+            <li>Có từ 1-2 năm kinh nghiệm làm việc ở vị trí quản lý sản phẩm, quản lý ngành hàng, ưu tiên ứng viên có
+                kinh nghiệm trong lĩnh vực thương mại điện tử và ngành hàng thú cưng.</li>
+            <li>Kỹ năng phân tích thị trường, lập kế hoạch và triển khai chiến dịch marketing.</li>
+            <li>Hiểu biết sâu về ngành hàng thú cưng, xu hướng tiêu dùng và các sản phẩm liên quan là một lợi thế.</li>
+            <li>Kỹ năng giao tiếp, đàm phán và xây dựng mối quan hệ tốt.</li>
+            <li>Sử dụng thành thạo các công cụ quản lý dự án, phần mềm văn phòng (Excel, PowerPoint, v.v.).</li>
+            <li>Khả năng làm việc độc lập, sáng tạo, có tinh thần trách nhiệm cao và khả năng chịu áp lực tốt.</li>
+            <li>Kỹ năng quản lý thời gian và tổ chức công việc hiệu quả.</li>
+            <b>Lương thưởng & Quyền lợi</b>
+            <li>Mức lương cạnh tranh, thưởng theo hiệu quả công việc.</li>
+            <li>Môi trường làm việc chuyên nghiệp, năng động và thân thiện.</li>
+            <li>Cơ hội học hỏi, phát triển nghề nghiệp và thăng tiến trong công ty.</li>
+            <li>Các chế độ phúc lợi theo quy định của công ty và pháp luật hiện hành.</li>
+            <b>Hướng dẫn ứng tuyển</b>
+            <li>Điền form ứng tuyển ngay <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">TẠI ĐÂY</a></li>
+            <li>Có thể gửi thêm CV trực tiếp về Email: <a style="color: rgb(20, 111, 209);font-size: 17px"
+                    href="mailto:abc@gmail.com">career@paddy.vn</a> với tiêu đề
+                mail [NVLS] Tên + SĐT</li>
+            <li>Inbox <a style="color: rgb(20, 111, 209);font-size: 17px" href="#">Fanpage</a> nếu có thắc mắc về các vị
+                trí đang ứng
+                tuyển</li>
+        </ul>
+
+    </div>
+
+    <footer class=" foot">
+        <div class="footchild">
+            <h2>Thành viên Paddiers</h2>
+            <p>
+                Đăng ký thành viên ngay hôm nay để nhận email về sản phẩm mới và
+                chương trình khuyến mãi của Paddy
+            </p>
+            <div class="footchild1">
+                <input type="text" placeholder="Email của bạn..." />
+                <button type="submit">Đăng Ký</button>
+            </div>
+        </div>
+        <div class="fulldvu">
+            <div class="fulldvuchild">
+                <b>Shop</b>
+                <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
+                <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
+                <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
+            </div>
+
+            <div class="fulldvuchild">
+                <b>Paddy Pet Shop</b>
+                <a href="petshop-web/frontend/view/contact.html">Giới Thiệu</a>
+                <a href="petshop-web/frontend/view/foodpage/member.html">Thành Viên Paddier</a>
+                <a href="petshop-web/frontend/view/foodpage/terms.html">Điều Khoản Sử Dụng</a>
+                <a href="petshop-web/frontend/view/foodpage/recruiment.html">Tuyển Dụng</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Hỗ Trợ Khách Hàng</b>
+                <a href="petshop-web/frontend/view/foodpage/exchange.html">Chính Sách Đổi Trả Hàng</a>
+                <a href="petshop-web/frontend/view/foodpage/transfer.html">Phương Thức Vận Chuyển</a>
+                <a href="petshop-web/frontend/view/foodpage/privacy.html">Chính Sách Bảo Mật</a>
+                <a href="petshop-web/frontend/view/foodpage/payment.html">Phương Thức Thanh Toán</a>
+                <a href="petshop-web/frontend/view/foodpage/refund.html">Chính Sách Hoàn Tiền</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Liên Hệ</b>
+                <p>Kiến Trúc Hà Nội</p>
+                <p>
+                    XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội,
+                    Việt Nam
+                </p>
+
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/telephone-call.png" width="20px" class="icon"
+                        alt="">
+                    Hotline: 0867677891
+                </p>
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/email.png" width="20px" class="icon" alt="">Email:
+                    contact@paddy.vn
+                </p>
+                <p>
+                    <span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/facebook.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/tiktok.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/youtube.png" width="20px" class="iconn" alt="">
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
+    <script src=" /petshop-web/frontend/resources/script/homescript.js"></script>
+    <script src="/petshop-web/frontend/resources/script/home.js"></script>
+</body>
+
+</html>

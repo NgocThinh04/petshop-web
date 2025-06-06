@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.example.petshop_web.entity.Smart;
 
-
 @Repository
 public interface SmartRP extends JpaRepository<Smart, Long> {
 
@@ -17,6 +16,14 @@ public interface SmartRP extends JpaRepository<Smart, Long> {
 
     @Query("SELECT sm FROM Smart sm WHERE sm.ClassifySmart = 'T02'")
     List<Smart> getsmclasstiify2();
-    
+
+    @Query("SELECT COUNT(DISTINCT s.ClassifySmart) FROM Smart s")
+    int getcountsm();
+
+    @Query("""
+               SELECT SUM(s.QuantitySmart)
+               FROM Smart s
+            """)
+    Integer getTotalSmartQuantity();
 
 }

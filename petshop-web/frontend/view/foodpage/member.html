@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính sách - Đổi trả hàng</title>
+    <link rel="stylesheet" href="/petshop-web/frontend/resources/style/exchange.css" />
+    <link
+      rel="stylesheet"
+      href="/petshop-web/frontend/resources/style/cat.css"
+    />
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerFrame1">
+            <a href="/petshop-web/frontend/view/home.html">
+                <img src="/petshop-web/frontend/resources/image/logo.avif" />
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                    <img src="/petshop-web/frontend/resources/image/search.png" alt="#" />
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6924/6924546.png" />
+                    <p>Wishlist</p>
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/16470/16470836.png" />
+                    <p>Đăng nhập</p>
+                </button>
+                <script src="/petshop-web/frontend/resources/script/home.js"></script>
+                <div id="login-overlap" class="login-overlap hidden">
+                    <div id="loginform" class="login-form">
+                        <div class="login-content">
+                            <span class="close-btn" onclick="clickbtn()">×</span>
+                            <h3>Đăng Nhập</h3>
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Mật khẩu" required />
+                            <button>Đăng Nhập</button>
+                            <a href="#">Quên mật khẩu?</a>
+                            <button onclick="clickbtn2()" class="register-btn">
+                                Tạo tài khoản mới
+                            </button>
+                            <div id="creatform" class="creatform hidden">
+                                <div class="creat-content">
+                                    <span class="close" onclick="clickbtn2()">×</span>
+                                    <h3>Tạo tài khoản mới</h3>
+                                    <input type="text" placeholder="Tên người dùng" required />
+                                    <input type="email" placeholder="Email đăng nhập" required />
+                                    <input type="text" name="" placeholder="Mật khẩu" required />
+                                    <button>Quay lại trang đang nhập</button>
+                                    <button>Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cacdvukhac">
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png" />
+                    <p>Giỏ Hàng</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/petshop-web/frontend/view/dog/dog.html">Chó</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm sóc vệ sinh cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogfood.html">Thức ăn cho cúnn</a>
+                        <a href="/petshop-web/frontend/view/dog/dogcake.html">Bánh Thưởng</a>
+                        <a href="/petshop-web/frontend/view/dog/dogaccessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm Sóc Sức Khỏe Cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogtransportcage.html">Vận Chuyển</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/petshop-web/frontend/view/cat/cat.html">Mèo</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/cat/catfood.html">Thức ăn cho mèo</a>
+                        <a href="/petshop-web/frontend/view/cat/accessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/cat/healthcare.html">Chăm Sóc Sức Khỏe</a>
+                        <a href="/petshop-web/frontend/view/cat/transportcage.html">Vận Chuyển-Chuồng</a>
+                        <a href="/petshop-web/frontend/view/cat/hygiene.html">Vệ sinh</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/newproducts.html">Hàng mới về</a></li>
+                <li>
+                    <a href="/petshop-web/frontend/view/smart/smart.html">Thiết bị thông minh </a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/smart/feeder.html">Máy ăn uống tự động</a>
+                        <a href="/petshop-web/frontend/view/smart/pet-toilet.html">Nhà vệ sinh tự động</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/trademark.html">Thương hiệu</a></li>
+                <li><a href="/petshop-web/frontend/view/contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="Content">
+        <div class="voucher-info">
+            <p>Chào mừng bạn đến với thế giới của Paddy, bạn sẽ có cơ hội nhận được voucher giảm <span
+                    class="highlight">20%</span> </p>
+        </div>
+        <ul>
+            <a style="font-size: 30px;">PADDIER CLUB</a>
+        </ul>
+        <br>
+        <br>
+        <img src="/petshop-web/frontend/resources/image/banner.webp" style="display: block; margin: 0 auto;" alt="">
+        <h2>Giới thiệu chương trình khách hàng thành viên Paddier</h2>
+        <ul>
+            <a>1. Paddy Membership là gì?</a>
+            <p>Paddy Membership là một chương trình tích điểm thành viên của Paddy nhằm tri ân khách hàng thân thiết.
+                Khi tham gia, bạn sẽ nhận được những ưu đãi vô cùng hấp dẫn khi đạt được các hạng mức định sẵn. Paddier
+                sẽ được thăng hạng ngay khi đạt đủ số điểm yêu cầu ở hạng mức đó và tiếp tục tích luỹ ở hạng mức tiếp
+                theo. Vậy làm sao để trở thành Paddier?
+            </p>
+            <p>Chỉ cần khách hàng phát sinh 01 đơn hàng và cung cấp số điện thoại để nhập vào hệ thống là đã trở thành
+                Paddier. Các đơn hàng sau sẽ cộng dồn cho đến khi đạt hạng mức. </p>
+            <a style="color: rgb(147, 28, 28);">
+                <p>Lưu ý: Chỉ áp dụng tích điểm khi khách hàng mua thông qua:</p>
+            </a>
+            <p>Kênh Online: Website Paddy.vn, Hotline, Zalo, Fanpage, Instagram</p>
+            <p>Kênh Offline: </p>
+            <li>91B Trần Não, P. An Khánh, Tp. Thủ Đức (Quận 2 cũ)</li>
+            <li>406 Nguyễn Thị Thập, P. Tân Quy, Quận 7, HCM</li>
+            <li>168 Trường Sa, Phường 1, Bình Thạnh, Tp. HCM</li>
+            <li>412/3 Nơ Trang Long, Phường 13, Bình Thạnh, Tp. HCM</li>
+
+        </ul>
+        <ul>
+            <a>2. Chương trình khách hàng thân thiết - Paddier Membership mới (01/07/2023).</a>
+            <br>
+            <br>
+            <img src="/petshop-web/frontend/resources/image/banner1.webp"
+                style="display: block; margin: 0 auto; width: 1200px; height: auto;" alt="">
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Mới (Paddier)</p>
+            </a>
+            <li>Điều kiện: Khách hàng phát sinh 01 đơn hàng sẽ trở thành Paddier</li>
+            <li>Quyền lợi:
+                <p>- Tích luỹ điểm thành viên</p>
+                <p>- Nhận thông tin các chương trình ưu đãi mới nhất</p>
+            </li>
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Bạc (Silver)</p>
+            </a>
+            <li>Điều kiện: Điểm tích luỹ luỹ kế trong một năm đạt từ 2.000.000VND </li>
+            <li>Quyền lợi:
+                <p>- Voucher 50.000VND thăng hạng</p>
+            </li>
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Vàng (Gold)</p>
+            </a>
+            <li>Điều kiện: Điểm tích luỹ luỹ kế trong một năm đạt từ 5.000.000VND </li>
+            <li>Quyền lợi:
+                <p>- Voucher 100.000VND thăng hạng</p>
+                <p>- Freeship tối đa 30.000VND cho các đơn giao hàng từ 500.000VND</p>
+                <p>- Ưu đãi giảm 3% 01 đơn hàng trong tuần sinh nhật Paddy (áp dụng cộng dồn nhiều CTKM khác nếu có)</p>
+            </li>
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Bạch Kim (Platinum)</p>
+            </a>
+            <li>Điều kiện: Điểm tích luỹ luỹ kế trong một năm đạt từ 10.000.000VND </li>
+            <li>Quyền lợi:
+                <p>- Voucher 250.000VND thăng hạng</p>
+                <p>- Freeship tối đa 30.000VND cho các đơn giao hàng từ 400.000VND</p>
+                <p>- Ưu đãi giảm 4% 01 đơn hàng trong tuần sinh nhật Paddy (áp dụng cộng dồn nhiều CTKM khác nếu có)</p>
+            </li>
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Kim Cương (Diamond)</p>
+            </a>
+            <li>Điều kiện: Điểm tích luỹ luỹ kế trong một năm đạt từ 20.000.000VND </li>
+            <li>Quyền lợi:
+                <p>- Voucher 500.000VND thăng hạng</p>
+                <p>- Freeship tối đa 30.000VND cho các đơn giao hàng từ 300.000VND</p>
+                <p>- Ưu đãi giảm 5% 01 đơn hàng trong tuần sinh nhật Paddy (áp dụng cộng dồn nhiều CTKM khác nếu có)</p>
+                <p>- Các chương trình khuyến mãi độc quyền</p>
+                <p>- Mẫu dùng thử các sảm phẩm mới</p>
+            </li>
+            <a style="color: rgb(54, 79, 240);">
+                <p>Thành Viên Kim Cương Plus(Diamond+)</p>
+            </a>
+            <li>Điều kiện: Điểm tích luỹ luỹ kế trong một năm đạt từ 30.000.000VND </li>
+            <li>Quyền lợi:
+                <p>- Voucher 500.000VND thăng hạng mỗi 10.000.000 tiếp theo</p>
+                <p>- Freeship tối đa 30.000VND cho tất cả các đơn</p>
+                <p>- Ưu đãi giảm 6% 01 đơn hàng trong tuần sinh nhật Paddy (áp dụng cộng dồn nhiều CTKM khác nếu có)</p>
+                <p>- Các chương trình khuyến mãi độc quyền</p>
+                <p>- Mẫu dùng thử các sảm phẩm mới</p>
+            </li>
+            <p>Nếu bạn có bất cứ thắc mắc liên quan đến chương trình Thành viên Paddy, xin vui lòng liên hệ tới hotline
+                086 767 7891 hoặc inbox Fanpage.</p>
+
+    </div>
+
+    <footer class="foot">
+        <div class="footchild">
+            <h2>Thành viên Paddiers</h2>
+            <p>
+                Đăng ký thành viên ngay hôm nay để nhận email về sản phẩm mới và
+                chương trình khuyến mãi của Paddy
+            </p>
+            <div class="footchild1">
+                <input type="text" placeholder="Email của bạn..." />
+                <button type="submit">Đăng Ký</button>
+            </div>
+        </div>
+        <div class="fulldvu">
+            <div class="fulldvuchild">
+                <b>Shop</b>
+                <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
+                <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
+                <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
+            </div>
+
+            <div class="fulldvuchild">
+                <b>Paddy Pet Shop</b>
+                <a href="petshop-web/frontend/view/contact.html">Giới Thiệu</a>
+                <a href="petshop-web/frontend/view/foodpage/member.html">Thành Viên Paddier</a>
+                <a href="petshop-web/frontend/view/foodpage/terms.html">Điều Khoản Sử Dụng</a>
+                <a href="petshop-web/frontend/view/foodpage/recruiment.html">Tuyển Dụng</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Hỗ Trợ Khách Hàng</b>
+                <a href="petshop-web/frontend/view/foodpage/exchange.html">Chính Sách Đổi Trả Hàng</a>
+                <a href="petshop-web/frontend/view/foodpage/transfer.html">Phương Thức Vận Chuyển</a>
+                <a href="petshop-web/frontend/view/foodpage/privacy.html">Chính Sách Bảo Mật</a>
+                <a href="petshop-web/frontend/view/foodpage/payment.html">Phương Thức Thanh Toán</a>
+                <a href="petshop-web/frontend/view/foodpage/refund.html">Chính Sách Hoàn Tiền</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Liên Hệ</b>
+                <p>Kiến Trúc Hà Nội</p>
+                <p>
+                    XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội,
+                    Việt Nam
+                </p>
+
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/telephone-call.png" width="20px" class="icon"
+                        alt="">
+                    Hotline: 0867677891
+                </p>
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/email.png" width="20px" class="icon" alt="">Email:
+                    contact@paddy.vn
+                </p>
+                <p>
+                    <span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/facebook.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/tiktok.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/youtube.png" width="20px" class="iconn" alt="">
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
+    <script src=" /petshop-web/frontend/resources/script/homescript.js"></script>
+    <script src="/petshop-web/frontend/resources/script/home.js"></script>
+</body>
+
+</html>

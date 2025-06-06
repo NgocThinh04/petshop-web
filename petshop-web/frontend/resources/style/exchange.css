@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Content {
+    margin-top: 0px;
+    width: 90%;
+    margin-left: 90px;
+
+}
+
+.Content b {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Arial', cursive;
+}
+
+.Content h2 {
+    margin-top: 7px;
+    font-size: 26px;
+    font-family: 'Arial', cursive;
+    text-align: center;
+}
+
+.Content h3 {
+    margin-top: 7px;
+    font-size: 23px;
+    font-family: 'Arial', cursive;
+}
+
+.Content p {
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 1.3;
+    font-family: 'Arial', cursive;
+}
+
+.Content ul {
+
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Arial', cursive;
+}
+
+.Content ol {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Arial', cursive;
+}
+
+.Content ol li {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 50px;
+    font-family: 'Arial', cursive;
+    padding: 10px 0px;
+    word-wrap: break-word;
+    /* Chạy đến hết trang trước khi xuống dòng */
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.1;
+
+}
+
+.Content ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Content a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Arial', cursive;
+}
+
+.Content ul li {
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 50px;
+    font-family: 'Arial', cursive;
+    padding: 10px 0px;
+    word-wrap: break-word;
+    /* Chạy đến hết trang trước khi xuống dòng */
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1;
+
+}
+
+
+.foot {
+    padding: 20px 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 570px;
+    background-color: whitesmoke;
+    align-items: center;
+    font-family: 'Arial', cursive;
+}
+
+.footchild {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footchild h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(5, 5, 5);
+}
+
+.footchild p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footchild1 {
+    display: flex;
+    gap: 20px;
+    height: 45px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.footchild1 input[type="text"] {
+    padding: 8px 15px;
+    outline: none;
+    font-size: 20px;
+}
+
+.footchild1 input {
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid rgb(3, 3, 3);
+}
+
+.footchild1 button {
+    width: 20%;
+    border-radius: 15px;
+    border: 0px;
+    color: white;
+    background-color: rgb(83, 71, 197);
+
+}
+
+.footchild1 button:hover {
+    background-color: black;
+}
+
+.fulldvu {
+    display: flex;
+    margin-top: 50px;
+    height: 65%;
+    width: 100%;
+}
+
+.fulldvuchild {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: left;
+}
+
+.fulldvuchild a {
+
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.fulldvuchild p {
+    display: flex;
+}
+
+.fulldvuchild a:hover {
+    text-decoration: underline;
+    color: rgb(7, 79, 234);
+}
+
+/*Login*/
+#producthome {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    padding: 10px;
+}
+
+.login-form {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease;
+    z-index: 9999;
+}
+
+.login-form.active {
+    right: 0;
+    animation: fadeSlideIn 0.5s ease;
+}
+
+.login-content {
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-content h3 {
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+}
+
+.login-content input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+}
+
+.login-content button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.register-btn {
+    background-color: orange;
+    color: #1b1266;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+}
+
+.submit {
+    border: none;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+}
+
+.submit:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-otp {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 5px 0;
+
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.iconn {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.table div {
+    flex: 1;
+    text-align: center;
+}
+
+.table .titlee {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+
+.feature-box {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.feature-box img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.feature-box img:hover {
+    transform: scale(1.2);
+}
+
+.feature-box p {
+    margin: 5px 0;
+}
+
+.pet-products {
+    max-width: 1300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 0 1 1300px;
+    /* Giới hạn chiều rộng mỗi ảnh */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.voucher-info {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px dashed #0800ff;
+    border-radius: 10px;
+}
+
+.voucher-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.voucher-info .highlight {
+    color: #1f26e8;
+    font-weight: bold;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 40px auto 60px auto;
+    max-width: 1200px;
+    min-height: 420px;
+    background: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.contact-image {
+    flex: 1.2;
+    background: #fff;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 420px;
+    border-radius: 16px 0 0 16px;
+}
+
+.contact-info {
+    flex: 1;
+    background: #cbe2fa;
+    border-radius: 0 16px 16px 0;
+    padding: 48px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 340px;
+    min-height: 420px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 18px;
+    color: #222;
+    font-weight: bold;
+}
+
+.contact-detail p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-detail .contact-icon {
+    font-size: 1.2em;
+    margin-right: 7px;
+    color: #1b1266;
+}
+
+.contact-buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.map-btn {
+    padding: 14px 0;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 32px;
+    border: 2px solid #222;
+    background: #fff;
+    color: #222;
+    font-size: 1.2rem;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(55, 55, 185, 0.07);
+}
+
+.map-btn:hover {
+    background: #1b1266;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .contact-main {
+        flex-direction: column;
+        max-width: 98vw;
+        min-height: unset;
+    }
+
+    .contact-image,
+    .contact-info {
+        border-radius: 16px 16px 0 0;
+        min-width: unset;
+        min-height: 220px;
+        padding: 20px;
+    }
+
+    .contact-info {
+        border-radius: 0 0 16px 16px;
+    }
+
+    .map-btn {
+        width: 100%;
+    }
+}
+
+/* Hiển thị ảnh banner lớn phía trên */
+.contact-banner-img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3f2fd;
+}
+
+.contact-banner-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+}

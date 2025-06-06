@@ -26,8 +26,12 @@ public class UserController {
 
     @GetMapping
     public List<User> getAllUser() {
-        return userService.getAllUser();
+        return userRP.findAll();
     }
+    // @GetMapping
+    // public List<User> getAllUser() {
+    // return userService.getAllUser();
+    // }
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User user) {

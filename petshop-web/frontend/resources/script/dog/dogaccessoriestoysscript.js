@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const category = urlParams.get("category");
 
   if (category) {
-    fetch(`http://localhost:8080/api/cat/${category}`)
+    fetch(`http://localhost:8080/api/dog/${category}`)
       .then(response => {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("productlist").innerHTML = "<p>Lỗi khi tải sản phẩm. Vui lòng thử lại.</p>";
       });
   } else {
-    fetch("http://localhost:8080/api/cat")
+    fetch("http://localhost:8080/api/dog")
       .then(response => {
         if (!response.ok) throw new Error("Lỗi HTTP");
         return response.json();

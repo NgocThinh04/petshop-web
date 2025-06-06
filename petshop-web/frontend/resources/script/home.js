@@ -164,3 +164,57 @@ function opencart() {
         loginform.classList.remove("active");
     }
 }
+//Search
+function showSuggestions() {
+  const box = document.getElementById('searchResults');
+  box.classList.remove('hidden');
+  box.classList.add('show');
+  box.innerHTML = "<div class='suggestion-item'>Nhập để tìm sản phẩm...</div>";
+}
+
+function hideSuggestionsWithDelay() {
+  setTimeout(() => {
+    const box = document.getElementById('searchResults');
+    box.classList.remove('show');
+    box.classList.add('hidden');
+  }, 200);
+}
+
+async function handleTyping() {
+  const keyword = document.getElementById("searchInput").value.trim();
+  const box = document.getElementById("searchResults");
+
+  if (keyword === "") {
+    box.innerHTML = "<div class='suggestion-item'>Nhập từ khoá để tìm sản phẩm...</div>";
+    return;
+  }
+
+  try {
+  const response = await fetch(`http://localhost:8080/api/product/keyword?keyword=${encodeURIComponent(keyword)}`);
+  if (!response.ok) throw new Error("Lỗi khi gọi API");
+
+  const products = await response.json();
+
+  if (products.length > 0) {
+    box.innerHTML = products.map(p => `
+      <div class="suggestion-item">
+        <img src="${p.imageproduct}" alt="${p.name}" class="product-image"/>
+        <div class="product-info">
+          <strong>${p.name}</strong><br />
+          <span class="product-price">Giá: ${p.price.toLocaleString()} đ</span>
+          <button class="view-button" onclick="viewProduct('${p.idProduct}')">Xem</button>
+        </div>
+      </div>
+    `).join('');
+  } else {
+    box.innerHTML = `<div class='suggestion-item'>Không tìm thấy sản phẩm</div>`;
+  }
+} catch (error) {
+  console.error(error);
+  box.innerHTML = `<div class='suggestion-item'>Lỗi khi lấy dữ liệu</div>`;
+}
+}
+
+function viewProduct(id) {
+  window.location.href = `/petshop-web/frontend/view/Productdetails.html?id=${id}`;
+}

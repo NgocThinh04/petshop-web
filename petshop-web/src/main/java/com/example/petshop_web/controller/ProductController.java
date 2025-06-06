@@ -2,6 +2,7 @@ package com.example.petshop_web.controller;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+
 import com.example.petshop_web.entity.Product;
 import com.example.petshop_web.entity.Productdto;
+import com.example.petshop_web.repository.BillRP;
+import com.example.petshop_web.repository.BillsmartRP;
 import com.example.petshop_web.repository.ProductCatRP;
+import com.example.petshop_web.repository.ProductDogRP;
+import com.example.petshop_web.repository.SmartRP;
+import com.example.petshop_web.repository.UserRP;
 import com.example.petshop_web.service.ImageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -34,7 +44,22 @@ public class ProductController {
     @Autowired
     private ProductCatRP productrp;
 
+    @Autowired
+    private ProductDogRP productdogrp;
+
+    @Autowired
+    private SmartRP smartrp;
+
     Product product;
+
+    @Autowired
+    private BillRP billRP;
+
+    @Autowired
+    private BillsmartRP billsmrp;
+
+    @Autowired
+    private UserRP userrp;
 
     // lay tat ca san pham cho va meo
     @GetMapping
@@ -125,4 +150,66 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/keyword")
+    public List<Product> search(@RequestParam String keyword) {
+        return productrp.findByClassifyunder2Like(keyword);
+    }
+
+    @GetMapping("/admin")
+    public Map<String, Integer> getThongKe() {
+        Map<String, Integer> result = new HashMap<>();
+        result.put("C01", productrp.countProductsByClassify("C01"));
+        result.put("D01", productdogrp.countProductsByClassify("D01"));
+        result.put("Smart", smartrp.getcountsm());
+        result.put("User", (int) userrp.count());
+        return result;
+    }
+
+    @GetMapping("/adminlinec")
+    public ResponseEntity<List<Map<String, Object>>> getMonthlyRevenueByClassify() {
+        List<Map<String, Object>> response = new ArrayList<>();
+
+        // Truy vấn từ bảng Bill (phân loại Chó, Mèo)
+        List<Object[]> billData = billRP.getMonthlyRevenueByClassify();
+        for (Object[] row : billData) {
+            if (row.length < 3)
+                continue; // tránh lỗi nếu thiếu dữ liệu
+
+            Map<String, Object> map = new HashMap<>();
+            map.put("month", row[0]); // YYYY-MM
+            map.put("type", row[1]); // "Chó", "Mèo"
+            map.put("total", row[2]); // Tổng doanh thu
+            response.add(map);
+        }
+
+        // Truy vấn từ bảng Smart
+        List<Object[]> smartData = billsmrp.getTotalMonthlyRevenueSmart(); // ví dụ trả về [month, total]
+        for (Object[] row : smartData) {
+            if (row.length < 2)
+                continue; // tránh lỗi nếu thiếu dữ liệu
+
+            Map<String, Object> map = new HashMap<>();
+            map.put("month", row[0]); // YYYY-MM
+            map.put("type", "Smart"); // Không có classify -> hardcode
+            map.put("total", row[1]); // Chỉ có 2 cột: [month, total]
+            response.add(map);
+        }
+
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/admin/quantity-summary")
+    public ResponseEntity<Map<String, Integer>> getQuantitySummary() {
+        List<Object[]> data = productrp.getQuantityByClassify();
+        Integer smartQty = smartrp.getTotalSmartQuantity();
+
+        Map<String, Integer> result = new HashMap<>();
+        for (Object[] row : data) {
+            result.put((String) row[0], ((Number) row[1]).intValue());
+        }
+
+        result.put("Smart", smartQty != null ? smartQty : 0);
+
+        return ResponseEntity.ok(result);
+    }
 }

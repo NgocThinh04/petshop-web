@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="/petshop-web/frontend/resources/style/Productdetails.css"
     />
+    <link
+      rel="stylesheet"
+      href="/petshop-web/frontend/resources/style/cat.css"
+    />
   </head>
   <body>
     <div class="header">
@@ -15,16 +19,27 @@
         <a href="/petshop-web/frontend/view/home.html">
           <img src="/petshop-web/frontend/resources/image/logo.avif" />
         </a>
-        <div class="search">
-          <input type="text" placeholder="Tìm kiếm..." />
-          <button type="submit">
-            <img
-              src="/petshop-web/frontend/resources/image/search.png"
-              alt="#"
+        <div class="search-wrapper">
+          <div class="search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Tìm kiếm..."
+              onfocus="showSuggestions()"
+              onblur="hideSuggestionsWithDelay()"
+              oninput="handleTyping()"
             />
-          </button>
+            <button type="submit">
+              <img
+                src="/petshop-web/frontend/resources/image/search.png"
+                alt="#"
+              />
+            </button>
+          </div>
+
+          <div id="searchResults" class="suggestion-box hidden"></div>
         </div>
-        <!---->
+
         <div class="cacdvukhac">
           <button class="btn" onclick="openWishlist()">
             <img
@@ -49,8 +64,7 @@
             </div>
           </div>
         </div>
-        <!---->
-        <!---->
+
         <div class="cacdvukhac">
           <button id="loginBtn" class="btn" onclick="clickbtn()">
             <img
@@ -61,11 +75,12 @@
           <div id="login-overlap" class="login-overlap hidden">
             <div id="loginform" class="login-form">
               <div class="login-content">
-                <span class="close-btn" onclick="clickbtn()"
-                  ><img
+                <span class="close-btn" onclick="clickbtn()">
+                  <img
                     src="/petshop-web/frontend/resources/image/icons8-close-96.png"
                     alt="*"
-                /></span>
+                  />
+                </span>
                 <h3>Đăng Nhập</h3>
                 <input
                   id="usernamelogin"
@@ -99,11 +114,12 @@
             <!--  -->
             <div id="creatform" class="login-form hidden">
               <div class="login-content">
-                <span class="close-btn" onclick="clickbtn()"
-                  ><img
+                <span class="close-btn" onclick="clickbtn()">
+                  <img
                     src="/petshop-web/frontend/resources/image/icons8-close-96.png"
                     alt="*"
-                /></span>
+                  />
+                </span>
                 <h3 id="textCreat">Đăng ký</h3>
                 <input
                   id="name"
@@ -178,6 +194,7 @@
             <!-- -->
           </div>
         </div>
+
         <div class="cacdvukhac">
           <button class="btn" onclick="opencart()">
             <img
@@ -198,9 +215,23 @@
                 <div class="cart-items">
                   <div id="cart"></div>
                 </div>
-                <div id="cart-actions" style="margin-top: 15px; text-align: center;">
-                  <p id="total-amount" style="font-weight:bold; font-size: 18px; margin-bottom: 10px;">Tổng:</p>
-                  <button onclick="checkoutCart()" class="submit">Xác nhận thanh toán</button>
+                <div
+                  id="cart-actions"
+                  style="margin-top: 15px; text-align: center"
+                >
+                  <p
+                    id="total-amount"
+                    style="
+                      font-weight: bold;
+                      font-size: 18px;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Tổng:
+                  </p>
+                  <button onclick="checkoutCart()" class="submit">
+                    Xác nhận thanh toán
+                  </button>
                   <div id="payment-overlap" class="login-overlap hidden">
                     <div class="login-form">
                       <div class="login-content">
@@ -210,32 +241,45 @@
                             alt="*"
                           />
                         </span>
-                        <h4 class="text">Vui lòng điền đầy đủ thông tin để nhận hàng</h4>
-                         <!-- Dropdown chọn tỉnh, huyện, xã -->
+                        <h4 class="text">
+                          Vui lòng điền đầy đủ thông tin để nhận hàng
+                        </h4>
+                        <!-- Dropdown chọn tỉnh, huyện, xã -->
                         <select id="province" class="form-input">
-                        <option value="">Chọn Tỉnh/Thành phố</option>
+                          <option value="">Chọn Tỉnh/Thành phố</option>
                         </select>
 
                         <select id="district" class="form-input" disabled>
-                        <option value="">Chọn Quận/Huyện</option>
+                          <option value="">Chọn Quận/Huyện</option>
                         </select>
 
                         <select id="ward" class="form-input" disabled>
-                        <option value="">Chọn Phường/Xã</option>
+                          <option value="">Chọn Phường/Xã</option>
                         </select>
-                        <input type="text" id="address-detail" class="form-input" placeholder="Địa chỉ cụ thể (số nhà, đường...)">
-                        <input type="text" id="phone" class="form-input" placeholder="SĐT">
-                        <label class="text" >Thông tin đơn hàng:</label>
+                        <input
+                          type="text"
+                          id="address-detail"
+                          class="form-input"
+                          placeholder="Địa chỉ cụ thể (số nhà, đường...)"
+                        />
+                        <input
+                          type="text"
+                          id="phone"
+                          class="form-input"
+                          placeholder="SĐT"
+                        />
+                        <label class="text">Thông tin đơn hàng:</label>
                         <div id="text-name"></div>
-                        
+
                         <label id=""></label>
                         <label id=""></label>
                         <label id="total-bill" class="text"></label>
-                        <button class="submit" onclick="confirmPayment()">Mua hàng</button>
+                        <button class="submit" onclick="confirmPayment()">
+                          Mua hàng
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -248,7 +292,7 @@
           <li>
             <a href="/petshop-web/frontend/view/dog/dog.html">Chó</a>
             <div class="divmenu">
-              <a href="/petshop-web/frontend/view/dog/doghealthcare.html"
+              <a href="/petshop-web/frontend/view/dog/doghygiene.html"
                 >Chăm sóc vệ sinh cún</a
               >
               <a href="/petshop-web/frontend/view/dog/dogfood.html"
@@ -365,6 +409,7 @@
         </button>
       </div>
     </div>
+
     <footer class="foot">
       <div class="footchild">
         <h2>Thành viên Paddiers</h2>
@@ -380,37 +425,87 @@
       <div class="fulldvu">
         <div class="fulldvuchild">
           <b>Shop</b>
-          <a href="#">Dành Cho Chó</a>
-          <a href="#">Dành Cho Mèo</a>
-          <a href="#">Thương Hiệu</a>
-          <a href="#">Blogs</a>
-          <a href="#">Bộ Sưu Tập</a>
+          <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
+          <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
+          <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
         </div>
+
         <div class="fulldvuchild">
           <b>Paddy Pet Shop</b>
-          <a href="#">Giới Thiệu</a>
-          <a href="#">Thành Viên Paddier</a>
-          <a href="#">Điều Khoản Sử Dụng</a>
-          <a href="#">Tuyển Dụng</a>
+          <a href="petshop-web/frontend/view/contact.html">Giới Thiệu</a>
+          <a href="petshop-web/frontend/view/foodpage/member.html"
+            >Thành Viên Paddier</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/terms.html"
+            >Điều Khoản Sử Dụng</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/recruiment.html"
+            >Tuyển Dụng</a
+          >
         </div>
         <div class="fulldvuchild">
           <b>Hỗ Trợ Khách Hàng</b>
-          <a href="#">Chính Sách Đổi Trả Hàng</a>
-          <a href="#">Phương Thức Vận Chuyển</a>
-          <a href="#">Chính Sách Bảo Mật</a>
-          <a href="#">Phương Thức Thanh Toán</a>
-          <a href="#">Chính Sách Hoàn Tiền</a>
+          <a href="petshop-web/frontend/view/foodpage/exchange.html"
+            >Chính Sách Đổi Trả Hàng</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/transfer.html"
+            >Phương Thức Vận Chuyển</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/privacy.html"
+            >Chính Sách Bảo Mật</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/payment.html"
+            >Phương Thức Thanh Toán</a
+          >
+          <a href="petshop-web/frontend/view/foodpage/refund.html"
+            >Chính Sách Hoàn Tiền</a
+          >
         </div>
         <div class="fulldvuchild">
           <b>Liên Hệ</b>
-          <p>CÔNG TY CỔ PHẦN THƯƠNG MẠI & DỊCH VỤ PADDY</p>
-          <p>MST: 0316459054</p>
+          <p>Kiến Trúc Hà Nội</p>
+          <p>XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội, Việt Nam</p>
+
           <p>
-            116 Nguyễn Văn Thủ, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh,
-            Việt Nam
+            <span class="icons"></span>
+            <img
+              src="/petshop-web/frontend/resources/image/telephone-call.png"
+              width="20px"
+              class="icon"
+              alt=""
+            />
+            Hotline: 0867677891
           </p>
-          <p>Hotline: 0867677891</p>
-          <p>Email: contact@paddy.vn</p>
+          <p>
+            <span class="icons"></span>
+            <img
+              src="/petshop-web/frontend/resources/image/email.png"
+              width="20px"
+              class="icon"
+              alt=""
+            />Email: contact@paddy.vn
+          </p>
+          <p>
+            <span class="icons"></span>
+            <img
+              src="/petshop-web/frontend/resources/image/facebook.png"
+              width="20px"
+              class="iconn"
+              alt=""
+            />
+            <img
+              src="/petshop-web/frontend/resources/image/tiktok.png"
+              width="20px"
+              class="iconn"
+              alt=""
+            />
+            <img
+              src="/petshop-web/frontend/resources/image/youtube.png"
+              width="20px"
+              class="iconn"
+              alt=""
+            />
+          </p>
         </div>
       </div>
     </footer>
@@ -419,24 +514,5 @@
     <script src="/petshop-web/frontend/resources/script/Productdetails.js"></script>
     <script src="/petshop-web/frontend/resources/script/homescript.js"></script>
     <script src="/petshop-web/frontend/resources/script/home.js"></script>
-    <!-- <script>
-document.addEventListener("DOMContentLoaded", function() {
-         const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
-
-    const allProducts = JSON.parse(localStorage.getItem("selectedProduct") || "[]");
-
-    const product = allProducts.find(p => p.id == productId);
-    if (product) {
-        document.querySelector(".namee").textContent = product.name;
-        document.querySelector(".costtt").textContent = product.price;
-        document.querySelector(".brandd").textContent = product.brand;
-        document.querySelector(".img").src = product.imageproduct;
-    } else {
-        // Nếu không có dữ liệu
-        document.body.innerHTML = "<p>Không có dữ liệu sản phẩm.</p>";
-    }
-});
-</script> -->
   </body>
 </html>

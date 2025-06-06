@@ -134,6 +134,8 @@
   padding: 20px;
 }
 
+
+ /* phần search */
 .search {
     align-items: center;
     display: flex;
@@ -169,12 +171,91 @@
     width: 30px;
 }
 
-#producthome {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 25px;
-    padding: 10px;
+.search-wrapper {
+  position: relative;
+  width: max-content;
 }
+
+
+.suggestion-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 0 0 6px 6px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 99;
+}
+
+
+.suggestion-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #f9f9f9;
+}
+
+.view-button {
+  margin-top: 6px;
+  padding: 4px 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-price {
+  color: #e91e63;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+
+
+
+
+/*Login*/
 
 .login-form {
     position: fixed;
@@ -190,25 +271,22 @@
   
   .login-form.active {
     right: 0;
-    animation: fadeSlideIn 0.5s ease;
   }
+  
   .login-content {
-    padding: 60px 30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
   }
   .login-content h3 {
-    padding: 20px;
-    font-size: 25px;
-    font-family: 'Pacifico', cursive;
+    padding: 10px;
+
   }
   .login-content input {
     margin-bottom: 15px;
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc;
-    outline: none;
-    font-size: 15px;
   }
   
   .login-content button {
@@ -218,89 +296,15 @@
   
   .register-btn {
     background-color: orange;
-    color: #1b1266;
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    font-family: 'Pacifico', cursive;
-    font-size: 16px;
   }
-  .submit {
-    border: none;
-    border-radius: 10px;
-    font-family: 'Pacifico', cursive;
-    font-size: 16px;
-  }
-  .submit:hover {
-    transform: translateY(-2px); 
-    transition: transform 0.2s ease;
-  }
-  .register-btn:hover {
-    transform: translateY(-2px); 
-    transition: transform 0.2s ease;
-  }
+  
   .close-btn {
     font-size: 24px;
     cursor: pointer;
     align-self: flex-end;
   }
-  .hidden {
-    display: none;
-  }
-  .form-otp {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    white-space: nowrap;
-  }
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /*WishList */
-.wishlist-items {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-    max-height: 400px; 
-    overflow-y: auto; 
-    padding: 10px 0;
-    box-sizing: border-box;
-  }
-  
-  .items {
-    display: flex;          
-    align-items: center;    
-    gap: 20px;            
-    background-color: #f7f7f7;
-    padding: 10px;
-    border-radius: 6px;
-  }
-  
-  .items p {
-    margin: 0;
-    flex: 1; 
-  }
-  
-  .items button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    align-items: center;
-  }
-  
-  .items button img {
-    width: 20px;
-    height: 20px;
-  }
-  
 
   .title {
    text-align: center;
@@ -322,11 +326,27 @@
 }
 
 .classify {
-
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
      flex: 1;
-     row-gap: 15px;
+     justify-content: left;
+     row-gap: 40px;
+}
+
+.classify p {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: peru;
+}
+
+.classify label {
+       font-size: 25px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       color: rgb(218, 133, 183);
+       
 }
 
 .productlist {
@@ -335,7 +355,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    border-top: 1px solid rgb(57, 55, 55);
+    border-top: 1px solid rgb(116, 59, 229);
 }
 
 .productlistchild {
@@ -484,9 +504,10 @@
     text-decoration: underline  ;
     color: rgb(7, 79, 234);
 }
+
 .chonThucAn {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 25px;
     accent-color: red;
 }
 
@@ -496,5 +517,19 @@ img {
 }
 
 img:hover {
-    transform: scale(1.3);
+    transform: scale(0.9);
+}
+
+.chitiet {   
+    height: 26px;
+    border-radius: 25px;
+    background-color: coral;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease ;
+}
+.chitiet:hover {
+    background-color: white;
+    color: rgb(239, 56, 32);
+    border: 2px solid rgb(149, 32, 239);
 }

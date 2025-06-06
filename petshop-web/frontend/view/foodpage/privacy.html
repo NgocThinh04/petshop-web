@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính sách - Đổi trả hàng</title>
+    <link rel="stylesheet" href="/petshop-web/frontend/resources/style/exchange.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerFrame1">
+            <a href="/petshop-web/frontend/view/home.html">
+                <img src="/petshop-web/frontend/resources/image/logo.avif" />
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button type="submit">
+                    <img src="/petshop-web/frontend/resources/image/search.png" alt="#" />
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6924/6924546.png" />
+                    <p>Wishlist</p>
+                </button>
+            </div>
+            <div class="cacdvukhac">
+                <button class="btn" onclick="clickbtn()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/16470/16470836.png" />
+                    <p>Đăng nhập</p>
+                </button>
+                <script src="/petshop-web/frontend/resources/script/home.js"></script>
+                <div id="login-overlap" class="login-overlap hidden">
+                    <div id="loginform" class="login-form">
+                        <div class="login-content">
+                            <span class="close-btn" onclick="clickbtn()">×</span>
+                            <h3>Đăng Nhập</h3>
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Mật khẩu" required />
+                            <button>Đăng Nhập</button>
+                            <a href="#">Quên mật khẩu?</a>
+                            <button onclick="clickbtn2()" class="register-btn">
+                                Tạo tài khoản mới
+                            </button>
+                            <div id="creatform" class="creatform hidden">
+                                <div class="creat-content">
+                                    <span class="close" onclick="clickbtn2()">×</span>
+                                    <h3>Tạo tài khoản mới</h3>
+                                    <input type="text" placeholder="Tên người dùng" required />
+                                    <input type="email" placeholder="Email đăng nhập" required />
+                                    <input type="text" name="" placeholder="Mật khẩu" required />
+                                    <button>Quay lại trang đang nhập</button>
+                                    <button>Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cacdvukhac">
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png" />
+                    <p>Giỏ Hàng</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/petshop-web/frontend/view/dog/dog.html">Chó</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm sóc vệ sinh cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogfood.html">Thức ăn cho cúnn</a>
+                        <a href="/petshop-web/frontend/view/dog/dogcake.html">Bánh Thưởng</a>
+                        <a href="/petshop-web/frontend/view/dog/dogaccessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/dog/doghealthcare.html">Chăm Sóc Sức Khỏe Cún</a>
+                        <a href="/petshop-web/frontend/view/dog/dogtransportcage.html">Vận Chuyển</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/petshop-web/frontend/view/cat/cat.html">Mèo</a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/cat/catfood.html">Thức ăn cho mèo</a>
+                        <a href="/petshop-web/frontend/view/cat/accessoriestoys.html">Phụ Kiện và đồ chơi</a>
+                        <a href="/petshop-web/frontend/view/cat/healthcare.html">Chăm Sóc Sức Khỏe</a>
+                        <a href="/petshop-web/frontend/view/cat/transportcage.html">Vận Chuyển-Chuồng</a>
+                        <a href="/petshop-web/frontend/view/cat/hygiene.html">Vệ sinh</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/newproducts.html">Hàng mới về</a></li>
+                <li>
+                    <a href="/petshop-web/frontend/view/smart/smart.html">Thiết bị thông minh </a>
+                    <div class="divmenu">
+                        <a href="/petshop-web/frontend/view/smart/feeder.html">Máy ăn uống tự động</a>
+                        <a href="/petshop-web/frontend/view/smart/pet-toilet.html">Nhà vệ sinh tự động</a>
+                    </div>
+                </li>
+                <li><a href="/petshop-web/frontend/view/trademark.html">Thương hiệu</a></li>
+                <li><a href="/petshop-web/frontend/view/contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="Content">
+        <div class="voucher-info">
+            <p>Chào mừng bạn đến với thế giới của Paddy, bạn sẽ có cơ hội nhận được voucher giảm <span
+                    class="highlight">20%</span> </p>
+        </div>
+        <h2>Chính sách quyền riêng tư</h2>
+        <ul>
+            <a>Chính sách bảo mật thông tin người dùng </a>
+        </ul>
+        <ul>
+            <a>1. Phạm vi thu thập và mục đích thu thập</a>
+            <p>Việc thu thập dữ liệu chủ yếu trên website paddy.vn bao gồm: email, số điện thoại, địa chỉ khách hàng.
+            </p>
+            <p>Dữ liệu sẽ được thu thập khi khách hàng đăng ký thành viên, hoặc đặt hàng trên hệ thống website paddy.vn
+                & paddy.com.vn</p>
+            <p>Đây là các thông tin mà Paddy cần khách hàng cung cấp khi sử dụng dịch vụ và nhằm để Paddy liên hệ xác
+                nhận khi khách hàng mua sắm tại Paddy</p>
+        </ul>
+        <ul>
+            <a>2. Phạm Vi Sử Dụng Thông Tin</a>
+            <p><b>Paddy sẽ sử dụng thông tin khách hàng cung cấp để:</b></p>
+            <li>Cung cấp các dịch vụ đến khách hàng;</li>
+            <li>Gửi các thông báo về các hoạt động trao đổi thông tin giữa khách hàng và website paddy.vn ;</li>
+            <li>Liên lạc và giải quyết với khách hàng trong những trường hợp đặc biệt.</li>
+            <li>Không sử dụng thông tin cá nhân của khách hàng ngoài mục đích xác nhận và liên hệ có liên quan đến giao
+                dịch tại Paddy.vn;</li>
+            <li>Trong trường hợp có yêu cầu của pháp luật: Công ty có trách nhiệm hợp tác cung cấp thông tin cá nhân
+                khách hàng khi có yêu cầu từ cơ quan tư pháp bao gồm: Viện kiểm sát, tòa án, cơ quan công an điều tra
+                liên quan đến hành vi vi phạm pháp luật nào đó của khách hàng. Ngoài ra, không ai có quyền xâm phạm vào
+                thông tin cá nhân của khách hàng.</li>
+        </ul>
+        <ul>
+            <a>3. Thời gian lưu trữ thông tin</a>
+            <p>Dữ liệu cá nhân của khách hàng sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ hoặc khách hàng yêu cầu hủy
+                bỏ. Còn lại trong mọi trường hợp thông tin cá nhân khách hàng sẽ được bảo mật trên máy chủ của Paddy</p>
+
+        </ul>
+        <ul>
+            <a>4. Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân</a>
+            <li>Công ty Cổ Phần Thương Mại Và Dịch Vụ Paddy</li>
+            <li><b>MST: 0316459054</b> Cấp Ngày 26/08/2020 tại Sở Kế Hoạch Và Đầu Tư Thành Phố Hồ Chí Minh
+                <br>
+                <b>Địa chỉ:</b> 112 Nguyễn Văn Thủ, P. Đa Kao, Quận 1
+                <br>
+                <b>Hotline:</b> 0374 41 41 42
+                <br>
+                <b>Email:</b> paddyestore@gmail.com
+            </li>
+        </ul>
+        <ul>
+            <a>5. Tổ chức các nhân được tiếp cận thông tin thu thập</a>
+            <li>Công ty Cổ Phần Thương Mại Và Dịch Vụ Paddy & Nhân Viên của công ty</li>
+            <li>Các đơn vị vận chuyển, đối tác giao nhận phụ trách giao hàng đến người dùng</li>
+            <li>Cơ quan chứ năng nhà nước có thẩm quyền như : Viện kiểm sát, tòa án, cơ quan công an điều tra liên quan
+                đến hành vi vi phạm pháp luật nào đó của khách hàng</li>
+
+
+        </ul>
+        <ul>
+            <a>6. Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ liệu cá nhân của mình</a>
+            <li>Khách hàng có quyền tự kiểm tra, cập nhật, điều chỉnh hoặc hủy bỏ thông tin cá nhân của mình bằng cách
+                yêu cầu chúng tôi thực hiện việc này.</li>
+            <li>Khách hàng có quyền gửi khiếu nại về người bán đến Ban quản trị của website khuyến mại Paddy. Khi tiếp
+                nhận những phản hồi này, chúng tôi sẽ xác nhận lại thông tin. Trường hợp đúng như phản ánh của thành
+                viên tùy theo mức độ, chúng tôi sẽ có những biện pháp xử lý kịp thời.</li>
+
+
+        </ul>
+        <ul>
+            <a>7. Cam kết bảo mật thông tin cá nhân khách hàng</a>
+            <li>Thông tin cá nhân của khách hàng trên Paddy được cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông
+                tin cá nhân của Paddy Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực hiện khi có sự
+                đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.</li>
+
+            <li>Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của khách
+                hàng khi không có sự cho phép đồng ý từ khách hàng.</li>
+            <li>Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân. Chúng tôi
+                sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho khách
+                hàng được biết.</li>
+            <li>Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của khách hàng bao gồm thông tin hóa đơn kế toán
+                chứng từ số hóa trên Paddy.vn</li>
+            <li>Ban quản lý Paddy.vn yêu cầu các cá nhân khi đăng ký/mua hàng phải cung cấp đầy đủ thông tin cá nhân có
+                liên quan như: Họ và tên, địa chỉ liên lạc, email, điện thoại và chịu trách nhiệm về tính pháp lý của
+                những thông tin trên. Ban quản lý Paddy.vn không chịu trách nhiệm cũng như không giải quyết mọi khiếu
+                nại có liên quan đến quyền lợi của khách hàng đó nếu xét thấy tất cả thông tin cá nhân của khách hàng đó
+                cung cấp khi đăng ký ban đầu là không chính xác.</li>
+
+
+        </ul>
+
+    </div>
+
+    <footer class="foot">
+        <div class="footchild">
+            <h2>Thành viên Paddiers</h2>
+            <p>
+                Đăng ký thành viên ngay hôm nay để nhận email về sản phẩm mới và
+                chương trình khuyến mãi của Paddy
+            </p>
+            <div class="footchild1">
+                <input type="text" placeholder="Email của bạn..." />
+                <button type="submit">Đăng Ký</button>
+            </div>
+        </div>
+        <div class="fulldvu">
+            <div class="fulldvuchild">
+                <b>Shop</b>
+                <a href="/petshop-web/frontend/view/dog/dog.html">Dành Cho Chó</a>
+                <a href="/petshop-web/frontend/view/cat/cat.html">Dành Cho Mèo</a>
+                <a href="/petshop-web/frontend/view/trademark.html">Thương Hiệu</a>
+            </div>
+
+            <div class="fulldvuchild">
+                <b>Paddy Pet Shop</b>
+                <a href="petshop-web/frontend/view/contact.html">Giới Thiệu</a>
+                <a href="petshop-web/frontend/view/foodpage/member.html">Thành Viên Paddier</a>
+                <a href="petshop-web/frontend/view/foodpage/terms.html">Điều Khoản Sử Dụng</a>
+                <a href="petshop-web/frontend/view/foodpage/recruiment.html">Tuyển Dụng</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Hỗ Trợ Khách Hàng</b>
+                <a href="petshop-web/frontend/view/foodpage/exchange.html">Chính Sách Đổi Trả Hàng</a>
+                <a href="petshop-web/frontend/view/foodpage/transfer.html">Phương Thức Vận Chuyển</a>
+                <a href="petshop-web/frontend/view/foodpage/privacy.html">Chính Sách Bảo Mật</a>
+                <a href="petshop-web/frontend/view/foodpage/payment.html">Phương Thức Thanh Toán</a>
+                <a href="petshop-web/frontend/view/foodpage/refund.html">Chính Sách Hoàn Tiền</a>
+            </div>
+            <div class="fulldvuchild">
+                <b>Liên Hệ</b>
+                <p>Kiến Trúc Hà Nội</p>
+                <p>
+                    XQJQ+6M, Quận Hà Đông, Thành phố Hà Nội,
+                    Việt Nam
+                </p>
+
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/telephone-call.png" width="20px" class="icon"
+                        alt="">
+                    Hotline: 0867677891
+                </p>
+                <p><span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/email.png" width="20px" class="icon" alt="">Email:
+                    contact@paddy.vn
+                </p>
+                <p>
+                    <span class="icons"></span>
+                    <img src="/petshop-web/frontend/resources/image/facebook.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/tiktok.png" width="20px" class="iconn" alt="">
+                    <img src="/petshop-web/frontend/resources/image/youtube.png" width="20px" class="iconn" alt="">
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
+    <script src=" /petshop-web/frontend/resources/script/homescript.js"></script>
+    <script src="/petshop-web/frontend/resources/script/home.js"></script>
+</body>
+
+</html>
