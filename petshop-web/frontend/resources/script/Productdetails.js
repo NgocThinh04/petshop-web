@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function formatCurrency(amount) {
     return amount.toLocaleString('vi-VN') +  '₫';
   }
-  
+  let quantity1 = 1;
   function changeQuantity(change) {
     let quantityInput = document.getElementById("quantity");
-    let quantity = parseInt(quantityInput.value);
+    let quantity= parseInt(quantityInput.value);
   
     quantity = Math.max(1, quantity + change);
     quantityInput.value = quantity;
-  
+    quantity1 = quantity;
     updateTotal();
   }
   
@@ -145,32 +145,72 @@ function showInfoProduct(product) {
   }
 
 //Cart
+// function addCart() {
+//   if(!isLoggedIn()) {
+//     alert("Bạn cần đăng nhập.")
+//     return;
+//   }
+//   const username = getCurrentUser().userName;
+//   const cartKey = `cart_${username}`;
+//   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+//   cart = cart.map(id => Number(id));
+//   const cartProductId = Number(productData.id);
+//   if(cart.includes(cartProductId)) {
+//       alert("Sản phẩm đã có trong giỏ hàng.");
+//       return;
+//   }
+//   cart.push(cartProductId);
+//   localStorage.setItem(cartKey, JSON.stringify(cart));
+//   alert("Đã thêm vào giỏ hàng!");
+//   renderCart();
+// }
 function addCart() {
-  if(!isLoggedIn()) {
-    alert("Bạn cần đăng nhập.")
+  if (!isLoggedIn()) {
+    alert("Bạn cần đăng nhập.");
     return;
   }
+
   const username = getCurrentUser().userName;
   const cartKey = `cart_${username}`;
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
-  cart = cart.map(id => Number(id));
-  const cartProductId = Number(productData.id);
-  if(cart.includes(cartProductId)) {
-      alert("Sản phẩm đã có trong giỏ hàng.");
-      return;
+  // Nếu giỏ hàng vẫn là mảng ID (kiểu cũ) thì convert sang object
+  if (typeof cart[0] === "number") {
+    cart = cart.map(id => ({
+      idProduct: id,
+      quantity: quantity1,
+      price: productData.price 
+    }));
   }
-  cart.push(cartProductId);
+
+  const cartProductId = Number(productData.id);
+  const existingItem = cart.find(item => item.idProduct === cartProductId);
+
+  if (existingItem) {
+    alert("Sản phẩm đã có trong giỏ hàng.");
+    return;
+  }
+
+  cart.push({
+    idProduct: cartProductId,
+    quantity: quantity1,
+    price: productData.price
+  });
+
   localStorage.setItem(cartKey, JSON.stringify(cart));
   alert("Đã thêm vào giỏ hàng!");
   renderCart();
 }
+
 function showInfoCart(product) {
   console.log("Cart:", product);
   const container = document.getElementById("cart");
   
-  let quantityInput = document.getElementById("quantity");
-  let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+  // let quantityInput = document.getElementById("quantity");
+  // let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+  let quantity = product.quantity || 1;
+
   let total = Number(product.price) * quantity;
   const itemDiv = document.createElement("div");
   itemDiv.className = "cart-items";
@@ -267,14 +307,30 @@ function renderCart() {
   }
 
   // Duyệt qua từng sản phẩm trong cart
-  const fetchPromises = cart.map(productId => {
-    return fetch(`http://localhost:8080/api/product/${productId}`)
+  // const fetchPromises = cart.map(productId => {
+  //   return fetch(`http://localhost:8080/api/product/${productId}`)
+  //     .then(res => res.json())
+  //     .then(product => {
+  //       // Mặc định số lượng là 1
+  //       const quantity = 1;
+  //       totalCartAmount += Number(product.price) * quantity;
+  //       showInfoCart(product); 
+  //     });
+  // });
+  const fetchPromises = cart.map(item => {
+    return fetch(`http://localhost:8080/api/product/${item.idProduct}`)
       .then(res => res.json())
       .then(product => {
-        // Mặc định số lượng là 1
-        const quantity = 1;
-        totalCartAmount += Number(product.price) * quantity;
-        showInfoCart(product); 
+        const quantity = item.quantity;
+        const price = item.price;
+
+        totalCartAmount += Number(price) * quantity;
+
+        // Thêm thông tin quantity vào đối tượng product để showInfoCart sử dụng
+        product.quantity = quantity;
+        product.price = price; // dùng giá trong cart để đảm bảo nhất quán
+
+        showInfoCart(product);
       });
   });
 
@@ -377,6 +433,7 @@ if (!currentUser || !currentUser.userName) {
     }
     const userData = await userResponse.json();
     const userId = userData.id; // Lấy idUser từ response
+
 
     // Gửi từng sản phẩm POST về backend
     

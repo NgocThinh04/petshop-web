@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("productlist").innerHTML = "<p>Lỗi khi tải sản phẩm. Vui lòng thử lại.</p>";
       });
   } else {
-    fetch("http://localhost:8080/api/cat/")
+    fetch("http://localhost:8080/api/cat")
       .then(response => {
         if (!response.ok) throw new Error("Lỗi HTTP");
         return response.json();
