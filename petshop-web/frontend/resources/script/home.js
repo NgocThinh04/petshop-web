@@ -218,3 +218,4 @@ async function handleTyping() {
 function viewProduct(id) {
   window.location.href = `/petshop-web/frontend/view/Productdetails.html?id=${id}`;
 }
+

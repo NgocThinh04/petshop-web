@@ -14,6 +14,7 @@ if(productid) {
             document.getElementById("loai").value = data.classify;
             document.getElementById("Danhmuc").value = data.classifyUnder;
             document.getElementById("previewImage").src = data.imageproduct;
+            document.getElementById("mota").value = data.describe;
         });
         
         document.getElementById("nutnhap").addEventListener("click", function (e) {

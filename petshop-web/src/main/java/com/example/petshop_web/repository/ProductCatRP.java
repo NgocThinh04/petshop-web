@@ -34,4 +34,8 @@ public interface ProductCatRP extends JpaRepository<Product, Long> {
 
         @Query("SELECT COUNT(cf) FROM Product cf WHERE cf.Classify = :classify")
         int countProductsByClassify(@Param("classify") String classify);
+        
+@Query("SELECT c FROM Product c WHERE c.ClassifyUnder = :classify")
+List<Product> getalleachclassifyunder(@Param("classify") String classify);
+
 }

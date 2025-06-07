@@ -9,13 +9,13 @@
     href="/petshop-web/frontend/resources/style/Admin/ProductAD.css" 
       />
 </head>
-<body>
+<body style="background-image: url('/petshop-web/frontend/resources/image/meo2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
     <div class="maincard">
 
       <!-- anh san pham -->
       <div class="cardimg">
           <p>Vui lòng chọn ảnh của thiết bị</p>
-                 <input type="file" id="anhsp" />
+                 <input type="file" id="anhsp" class="styled-input" />
           
                  <div style=" border-radius: 9px; border: 5px solid rgb(150, 138, 138);">
                    <img id="previewImage" />
@@ -36,69 +36,69 @@
             <p>Danh Mục Sản Phẩm</p>
             <select id="Danhmuc">
     <option value="">-- Chọn danh mục --</option>
-    <option value="thucancho">Thức ăn cho cún</option>
-    <option value="thucanmeo">Thức Ăn Cho Mèo</option>
-    <option value="Phukien">Phụ Kiện-Đồ chơi </option>
-    <option value="vanchuyenchuong">Vận Chuyển - Chuồng</option>
-    <option value="cssuckhoecun">Chăm Sóc Sức Khoẻ Cún</option>
-    <option value="cssuckhoemeo">Chăm Sóc Sức Khỏe mèo</option>
-    <option value="banhthuong">Bánh Thưởng cún</option>
-    <option value="vesinhcun">Chăm Sóc Vệ Sinh Cún</option>
-    <option value="vesinhmeo">Vệ Sinh Mèo</option>
+    <option value="dogfood">Thức ăn cho cún</option>
+    <option value="catfood">Thức Ăn Cho Mèo</option>
+    <option value="accessoriestoys">Phụ Kiện-Đồ chơi </option>
+    <option value="transportcage">Vận Chuyển - Chuồng</option>
+    <option value="doghealthcare">Chăm Sóc Sức Khoẻ Cún</option>
+    <option value="healthcare">Chăm Sóc Sức Khỏe mèo</option>
+    <option value="dogcake">Bánh Thưởng cún</option>
+    <option value="doghygiene">Chăm Sóc Vệ Sinh Cún</option>
+    <option value="hygiene">Vệ Sinh Mèo</option>
 </select>
           </div>
        </div>
        <div class="divson">
         <div class="divson1"> 
            <p>Loại danh mục sản phẩm </p>
-            <select class="select-loai" data-type="thucancho" style="display: none;">
+            <select class="select-loai" data-type="dogfood" style="display: none;">
                 <option value="thucanhatcho">Thức Ăn Hạt</option>
                 <option value="thucanuotcho">Thức Ăn Ướt</option>
                 <option value="thucandieutribenhtro">Thức Ăn Hỗ Trợ Điều Trị Bệnh</option>
                 <option value="thucanhuuco">Thức Ăn Hữu Cơ</option>
                 <option value="thucankngucoc">Thức Ăn Không Ngũ Cốc</option>
             </select>
-            <select class="select-loai" data-type="thucanmeo" style="display: none;">
+            <select class="select-loai" data-type="catfood"  style="display: none;">
                 <option value="thucanhatmeo">Thức Ăn Hạt mèo</option>
                 <option value="thucanuotmeo">Thức Ăn Ướt mèo</option>
                 <option value="thucandieutribenh">Thức Ăn Điều Trị Bệnh</option>
                 <option value="banhthuongmeo">Bánh Thưởng Mèo</option>
             </select>
-            <select class="select-loai" data-type="Phukien" style="display: none;">
+            <select class="select-loai" data-type="accessoriestoys" style="display: none;">
                 <option value="vongcoday">Vòng Cổ & Dây Dắt</option>
                 <option value="qao">Quần áo & Nón Mũ</option>
                 <option value="dungcu">Dụng Cụ Ăn Uống</option>
                 <option value="talotkhay">Tả Lót & Khay Vệ Sinh</option>
                 <option value="dochoi">Đồ chơi</option>
             </select>
-            <select class="select-loai" data-type="vanchuyenchuong" style="display: none;">
+            <select class="select-loai" data-type="transportcage" style="display: none;">
                 <option value="balotuivanc">Balo & Túi Vận Chuyển</option>
                 <option value="longvanchuyen">Lồng Vận Chuyển</option>
                 <option value="chuongnhadem">Chuồng - Nhà Nệm</option>
             </select>
-            <select class="select-loai" data-type="cssuckhoecun" style="display: none;">
+            <select class="select-loai" data-type="doghealthcare" style="display: none;">
                 <option value="vitaminc">Vitamin Cho Chó</option>
                 <option value="triveran">Trị Ve Rận & Xổ Giun</option>
                 <option value="thucphamcn">Thực Phẩm Chức Năng</option>
             </select>
-            <select class="select-loai" data-type="cssuckhoemeo" style="display: none;">
+            <select class="select-loai" data-type="healthcare" style="display: none;">
                 <option value="suabinhmeo">Sữa & Bình Bú Cho Mèo</option>
                 <option value="vitaminm">Vitamin & Thực Phẩm Bổ Sung</option>
             </select>
-            <select class="select-loai" data-type="banhthuong" style="display: none;">
+            <select class="select-loai" data-type="dogcake" style="display: none;">
                 <option value="banhthuogmem">Bánh Thưởng Mềm</option>
                 <option value="xuonggam">Xương Gặm Sạch Răng</option>
                 <option value="supthuong">Súp Thưởng</option>
                 <option value="banhquy">Bánh Quy</option>
                 <option value="thitsaykho">Thịt Sấy Khô</option>
             </select>
-            <select class="select-loai" data-type="vesinhcun" style="display: none;">
+            <select class="select-loai" data-type="doghygiene" style="display: none;">
                 <option value="vesinhrangmieng">Vệ Sinh Răng Miệng</option>
                 <option value="vesinhtaimat">Vệ Sinh Tai - Mắt</option>
                 <option value="suatamcho">Sữa Tắm & Phụ Kiện Tắm</option>
                 <option value="xitkhumuicho">Xịt Khử Mùi</option>
             </select>
-            <select class="select-loai" data-type="vesinhmeo" style="display: none;">
+            <select class="select-loai" data-type="hygiene" style="display: none;">
                 <option value="catmeo">Cát Mèo</option>
                 <option value="chamsocmeo">Chăm Sóc Răng Miệng</option>
                 <option value="suatammeo">Sữa tắm</option>

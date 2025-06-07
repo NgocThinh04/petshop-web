@@ -9,13 +9,13 @@
     href="/petshop-web/frontend/resources/style/Admin/SmartAD.css" 
       />
 </head>
-<body>
+<body style="background-image: url('/petshop-web/frontend/resources/image/meo2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
     <div class="maincard">
       
       <!-- anh san pham -->
       <div class="cardimg">
-          <p>Vui lòng chọn ảnh của thiết bị</p>
-                 <input type="file" id="anhsp" />
+          <p >Vui lòng chọn ảnh của thiết bị</p>
+                 <input type="file" id="anhsp"  class="styled-input" />
                  <div style=" border-radius: 9px; border: 5px solid rgb(150, 138, 138);">
                    <img id="previewImage" />
                  </div>
@@ -29,7 +29,7 @@
       <div class="divson">
         <div class="divson1">
             <p>Loại thiết bị</p>
-            <select id="loai">
+            <select id="loai" class="styled-select">
                 <option value="T01">Máy Ăn Uống Tự Động Cho Chó Mèo</option>
                 <option value="T02">Máy Vệ Sinh Tự Động Cho Mèo</option>
             </select>
@@ -64,7 +64,7 @@
        </div>
 
        <div class="divson">
-        <button type="button" id="nutnhap">Thêm sản phẩm</button>
+        <button type="button" class="bttonad" id="nutnhap">Thêm sản phẩm</button>
        </div>
      </div>
 

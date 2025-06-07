@@ -24,15 +24,23 @@ public class CatController {
     
     Product product;
     
+
+    @GetMapping("/all")
+    public List<Product> getallcat() {
+        return productcatrp.getcatpr();
+    }
     //lay cac san pham phan loai 1 meo
     @GetMapping
     public List<Product> getcatclasstifyunderr() {
         return productcatrp.getcatclasstifyunder();
     }
-
+     
     //lay cac san pham phan loai 2 meo
     @GetMapping("/{id}")
     public List<Product> getcatclasstifyunderr2(@PathVariable("id") String id){
         return productcatrp.getcatclasstifyunder2(id);
     }
+
+    
+
 }

@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/api/cat")
+fetch("http://localhost:8080/api/cat/all")
     .then((Response) => Response.json())
     .then((data) => {
         const product1 = document.getElementById("product");

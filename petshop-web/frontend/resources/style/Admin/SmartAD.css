@@ -12,6 +12,12 @@
   flex-direction: column;
 }
 
+.cardimg p {
+   font-style: italic;
+   font-weight: bold;
+   font-size: 25px;
+   color: #147ed4;
+}
 .cardimg div{
    height: 400px;
    margin-top: 10px;
@@ -29,7 +35,7 @@
 }
 
 .card {
-   height: 600px;
+   height: 650px;
    flex: 2;
    display: flex;
    flex-direction: column;
@@ -60,6 +66,7 @@
    row-gap: -30px;
 }
 .divson1 p {
+    font-style: italic;
    font-size: 20px;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    text-align: center;
@@ -67,11 +74,26 @@
    color:darkmagenta
 }
 
+.styled-select {
+  font-size: 16px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.styled-select:hover {
+  border-color: #ff9800;
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+}
  .divson1 input[type="text"] {
    height: 30px;
    border-radius: 14px;
    border: none;
-   box-shadow: 0px 8px 10px  rgb(241, 91, 91);
+   box-shadow: 0px 8px 10px  rgb(110, 107, 107);
     padding: 8px 15px;
     font-size: 17px;
     outline: none;
@@ -92,9 +114,41 @@
    border: none;
 }
 
+.styled-input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
  .divson1 select option {
     padding: 8px 15px;
     font-size: 17px;
     outline: none;
     background-color: whitesmoke;
+}
+
+.bttonad {   
+    height: 30px;
+    width: 50%;
+    border-radius: 25px;
+    background-color: rgb(234, 11, 11);
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease ;
+}
+.bttonad:hover {
+    background-color: white;
+    color: rgb(239, 56, 32);
+    border: 2px solid rgb(149, 32, 239);
 }

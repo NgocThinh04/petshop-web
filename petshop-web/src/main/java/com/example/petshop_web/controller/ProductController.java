@@ -212,4 +212,11 @@ public class ProductController {
 
         return ResponseEntity.ok(result);
     }
+
+
+    @GetMapping("/under2/{classify}")
+    public ResponseEntity<List<Product>> getProductsByClassify(@PathVariable String classify) {
+        List<Product> products = productrp.getalleachclassifyunder(classify);
+        return ResponseEntity.ok(products);
+    }
 }

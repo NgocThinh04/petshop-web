@@ -455,6 +455,7 @@ if (!currentUser || !currentUser.userName) {
     const responses = await Promise.all(sendPromises);
     if (responses.every(r => r.ok)) {
       alert("Đơn hàng đã được đặt thành công!");
+      location.reload();
       localStorage.removeItem(cartKey);
       renderCart(); 
     } else {
